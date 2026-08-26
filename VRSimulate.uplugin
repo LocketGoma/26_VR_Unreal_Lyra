@@ -19,9 +19,24 @@
 		{
 			"Name": "VRSimulateRuntime",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"TargetConfigurationDenyList": [
+				"Shipping"
+			]
 		}
 	],
 	"ExplicitlyLoaded": true,
-	"BuiltInInitialFeatureState": "Registered"
+	"BuiltInInitialFeatureState": "Registered",
+	"Plugins": [
+		{
+			"Name": "ShooterCore",
+			"Enabled": true,
+			"Activate": true
+		},
+		{
+			"Name": "ShooterTests",
+			"Enabled": true,
+			"Activate": true
+		}
+	]
 }
