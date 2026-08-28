@@ -1,0 +1,1463 @@
+﻿# VRSimulate_Properties Korean translation.
+# Fill out your copyright notice in the Description page of Project Settings.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: VRSimulate_Properties\n"
+"POT-Creation-Date: 2026-08-28 12:20\n"
+"PO-Revision-Date: 2026-08-28 12:20\n"
+"Language-Team: \n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Key:	VRSimSpatialInputComponent:AddRotationInput
+#. SourceLocation:	Meta-data for key DisplayName of member AddRotationInput in VRSimSpatialInputComponent (type: Function, owner: AddRotationInput)
+#: Meta-data for key DisplayName of member AddRotationInput in VRSimSpatialInputComponent (type: Function, owner: AddRotationInput)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:AddRotationInput"
+msgid "Add Rotation Input"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:AddTranslationInput
+#. SourceLocation:	Meta-data for key DisplayName of member AddTranslationInput in VRSimSpatialInputComponent (type: Function, owner: AddTranslationInput)
+#: Meta-data for key DisplayName of member AddTranslationInput in VRSimSpatialInputComponent (type: Function, owner: AddTranslationInput)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:AddTranslationInput"
+msgid "Add Translation Input"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:bDebugInteraction
+#. SourceLocation:	Meta-data for key DisplayName of member bDebugInteraction in VRSimControllerProxyComponent (type: BoolProperty, owner: VRSimControllerProxyComponent)
+#: Meta-data for key DisplayName of member bDebugInteraction in VRSimControllerProxyComponent (type: BoolProperty, owner: VRSimControllerProxyComponent)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:bDebugInteraction"
+msgid "Debug Interaction"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:bDebugInteraction
+#. SourceLocation:	Meta-data for key DisplayName of member bDebugInteraction in VRSimInteractionComponent (type: BoolProperty, owner: VRSimInteractionComponent)
+#: Meta-data for key DisplayName of member bDebugInteraction in VRSimInteractionComponent (type: BoolProperty, owner: VRSimInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:bDebugInteraction"
+msgid "Debug Interaction"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:bDebugInteraction
+#. SourceLocation:	Meta-data for key DisplayName of member bDebugInteraction in VRSimTeleportComponent (type: BoolProperty, owner: VRSimTeleportComponent)
+#: Meta-data for key DisplayName of member bDebugInteraction in VRSimTeleportComponent (type: BoolProperty, owner: VRSimTeleportComponent)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:bDebugInteraction"
+msgid "Debug Interaction"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:bDestinationValid
+#. SourceLocation:	Meta-data for key DisplayName of member bDestinationValid in VRSimTeleportComponent (type: BoolProperty, owner: VRSimTeleportComponent)
+#: Meta-data for key DisplayName of member bDestinationValid in VRSimTeleportComponent (type: BoolProperty, owner: VRSimTeleportComponent)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:bDestinationValid"
+msgid "Destination Valid"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:SetDebugEnabled:bEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member bEnabled in VRSimControllerProxyComponent:SetDebugEnabled (type: BoolProperty, owner: SetDebugEnabled)
+#: Meta-data for key DisplayName of member bEnabled in VRSimControllerProxyComponent:SetDebugEnabled (type: BoolProperty, owner: SetDebugEnabled)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:SetDebugEnabled:bEnabled"
+msgid "Enabled"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:SetFeedbackEnabled:bEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member bEnabled in VRSimFeedbackComponent:SetFeedbackEnabled (type: BoolProperty, owner: SetFeedbackEnabled)
+#: Meta-data for key DisplayName of member bEnabled in VRSimFeedbackComponent:SetFeedbackEnabled (type: BoolProperty, owner: SetFeedbackEnabled)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:SetFeedbackEnabled:bEnabled"
+msgid "Enabled"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:SetInteractionEnabled:bEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member bEnabled in VRSimInteractableTarget:SetInteractionEnabled (type: BoolProperty, owner: SetInteractionEnabled)
+#: Meta-data for key DisplayName of member bEnabled in VRSimInteractableTarget:SetInteractionEnabled (type: BoolProperty, owner: SetInteractionEnabled)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:SetInteractionEnabled:bEnabled"
+msgid "Enabled"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:SetDebugEnabled:bEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member bEnabled in VRSimInteractionComponent:SetDebugEnabled (type: BoolProperty, owner: SetDebugEnabled)
+#: Meta-data for key DisplayName of member bEnabled in VRSimInteractionComponent:SetDebugEnabled (type: BoolProperty, owner: SetDebugEnabled)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:SetDebugEnabled:bEnabled"
+msgid "Enabled"
+msgstr ""
+
+#. Key:	VRSimPortalBase:SetPortalEnabled:bEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member bEnabled in VRSimPortalBase:SetPortalEnabled (type: BoolProperty, owner: SetPortalEnabled)
+#: Meta-data for key DisplayName of member bEnabled in VRSimPortalBase:SetPortalEnabled (type: BoolProperty, owner: SetPortalEnabled)
+msgctxt "UObjectDisplayNames,VRSimPortalBase:SetPortalEnabled:bEnabled"
+msgid "Enabled"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:SetSpatialInputEnabled:bEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member bEnabled in VRSimSpatialInputComponent:SetSpatialInputEnabled (type: BoolProperty, owner: SetSpatialInputEnabled)
+#: Meta-data for key DisplayName of member bEnabled in VRSimSpatialInputComponent:SetSpatialInputEnabled (type: BoolProperty, owner: SetSpatialInputEnabled)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:SetSpatialInputEnabled:bEnabled"
+msgid "Enabled"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:SetDebugEnabled:bEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member bEnabled in VRSimTeleportComponent:SetDebugEnabled (type: BoolProperty, owner: SetDebugEnabled)
+#: Meta-data for key DisplayName of member bEnabled in VRSimTeleportComponent:SetDebugEnabled (type: BoolProperty, owner: SetDebugEnabled)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:SetDebugEnabled:bEnabled"
+msgid "Enabled"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:bFeedbackEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member bFeedbackEnabled in VRSimFeedbackComponent (type: BoolProperty, owner: VRSimFeedbackComponent)
+#: Meta-data for key DisplayName of member bFeedbackEnabled in VRSimFeedbackComponent (type: BoolProperty, owner: VRSimFeedbackComponent)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:bFeedbackEnabled"
+msgid "Feedback Enabled"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:bHasDestination
+#. SourceLocation:	Meta-data for key DisplayName of member bHasDestination in VRSimTeleportComponent (type: BoolProperty, owner: VRSimTeleportComponent)
+#: Meta-data for key DisplayName of member bHasDestination in VRSimTeleportComponent (type: BoolProperty, owner: VRSimTeleportComponent)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:bHasDestination"
+msgid "Has Destination"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:bInteractionEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member bInteractionEnabled in VRSimInteractableTarget (type: BoolProperty, owner: VRSimInteractableTarget)
+#: Meta-data for key DisplayName of member bInteractionEnabled in VRSimInteractableTarget (type: BoolProperty, owner: VRSimInteractableTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:bInteractionEnabled"
+msgid "Interaction Enabled"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:ReceiveSelectionChanged:bIsSelected
+#. SourceLocation:	Meta-data for key DisplayName of member bIsSelected in VRSimInteractableTarget:ReceiveSelectionChanged (type: BoolProperty, owner: ReceiveSelectionChanged)
+#: Meta-data for key DisplayName of member bIsSelected in VRSimInteractableTarget:ReceiveSelectionChanged (type: BoolProperty, owner: ReceiveSelectionChanged)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:ReceiveSelectionChanged:bIsSelected"
+msgid "Is Selected"
+msgstr ""
+
+#. Key:	VRSimPortalBase:bPortalEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member bPortalEnabled in VRSimPortalBase (type: BoolProperty, owner: VRSimPortalBase)
+#: Meta-data for key DisplayName of member bPortalEnabled in VRSimPortalBase (type: BoolProperty, owner: VRSimPortalBase)
+msgctxt "UObjectDisplayNames,VRSimPortalBase:bPortalEnabled"
+msgid "Portal Enabled"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:PlaySelectionFeedback:bSelected
+#. SourceLocation:	Meta-data for key DisplayName of member bSelected in VRSimFeedbackComponent:PlaySelectionFeedback (type: BoolProperty, owner: PlaySelectionFeedback)
+#: Meta-data for key DisplayName of member bSelected in VRSimFeedbackComponent:PlaySelectionFeedback (type: BoolProperty, owner: PlaySelectionFeedback)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:PlaySelectionFeedback:bSelected"
+msgid "Selected"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:bSelected
+#. SourceLocation:	Meta-data for key DisplayName of member bSelected in VRSimInteractableTarget (type: BoolProperty, owner: VRSimInteractableTarget)
+#: Meta-data for key DisplayName of member bSelected in VRSimInteractableTarget (type: BoolProperty, owner: VRSimInteractableTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:bSelected"
+msgid "Selected"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:bSpatialInputEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member bSpatialInputEnabled in VRSimSpatialInputComponent (type: BoolProperty, owner: VRSimSpatialInputComponent)
+#: Meta-data for key DisplayName of member bSpatialInputEnabled in VRSimSpatialInputComponent (type: BoolProperty, owner: VRSimSpatialInputComponent)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:bSpatialInputEnabled"
+msgid "Spatial Input Enabled"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:PlayInteractionFeedback:bSucceeded
+#. SourceLocation:	Meta-data for key DisplayName of member bSucceeded in VRSimFeedbackComponent:PlayInteractionFeedback (type: BoolProperty, owner: PlayInteractionFeedback)
+#: Meta-data for key DisplayName of member bSucceeded in VRSimFeedbackComponent:PlayInteractionFeedback (type: BoolProperty, owner: PlayInteractionFeedback)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:PlayInteractionFeedback:bSucceeded"
+msgid "Succeeded"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:PlayDestinationFeedback:bValid
+#. SourceLocation:	Meta-data for key DisplayName of member bValid in VRSimFeedbackComponent:PlayDestinationFeedback (type: BoolProperty, owner: PlayDestinationFeedback)
+#: Meta-data for key DisplayName of member bValid in VRSimFeedbackComponent:PlayDestinationFeedback (type: BoolProperty, owner: PlayDestinationFeedback)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:PlayDestinationFeedback:bValid"
+msgid "Valid"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:SetTeleportDestination:bValid
+#. SourceLocation:	Meta-data for key DisplayName of member bValid in VRSimTeleportComponent:SetTeleportDestination (type: BoolProperty, owner: SetTeleportDestination)
+#: Meta-data for key DisplayName of member bValid in VRSimTeleportComponent:SetTeleportDestination (type: BoolProperty, owner: SetTeleportDestination)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:SetTeleportDestination:bValid"
+msgid "Valid"
+msgstr ""
+
+#. Key:	VRSimInteractable:CanInteract
+#. SourceLocation:	Meta-data for key DisplayName of member CanInteract in VRSimInteractable (type: Function, owner: CanInteract)
+#: Meta-data for key DisplayName of member CanInteract in VRSimInteractable (type: Function, owner: CanInteract)
+msgctxt "UObjectDisplayNames,VRSimInteractable:CanInteract"
+msgid "Can Interact"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:ClearGrabbedTarget
+#. SourceLocation:	Meta-data for key DisplayName of member ClearGrabbedTarget in VRSimGrabComponent (type: Function, owner: ClearGrabbedTarget)
+#: Meta-data for key DisplayName of member ClearGrabbedTarget in VRSimGrabComponent (type: Function, owner: ClearGrabbedTarget)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:ClearGrabbedTarget"
+msgid "Clear Grabbed Target"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:ClearSelectedTarget
+#. SourceLocation:	Meta-data for key DisplayName of member ClearSelectedTarget in VRSimInteractionComponent (type: Function, owner: ClearSelectedTarget)
+#: Meta-data for key DisplayName of member ClearSelectedTarget in VRSimInteractionComponent (type: Function, owner: ClearSelectedTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:ClearSelectedTarget"
+msgid "Clear Selected Target"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:ClearTeleportDestination
+#. SourceLocation:	Meta-data for key DisplayName of member ClearTeleportDestination in VRSimTeleportComponent (type: Function, owner: ClearTeleportDestination)
+#: Meta-data for key DisplayName of member ClearTeleportDestination in VRSimTeleportComponent (type: Function, owner: ClearTeleportDestination)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:ClearTeleportDestination"
+msgid "Clear Teleport Destination"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:ControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member ControllerProxy in VRSimInteractionComponent (type: ObjectProperty, owner: VRSimInteractionComponent)
+#: Meta-data for key DisplayName of member ControllerProxy in VRSimInteractionComponent (type: ObjectProperty, owner: VRSimInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:ControllerProxy"
+msgid "Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:ControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member ControllerProxy in VRSimSpatialInputComponent (type: ObjectProperty, owner: VRSimSpatialInputComponent)
+#: Meta-data for key DisplayName of member ControllerProxy in VRSimSpatialInputComponent (type: ObjectProperty, owner: VRSimSpatialInputComponent)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:ControllerProxy"
+msgid "Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:ControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member ControllerProxy in VRSimTeleportComponent (type: ObjectProperty, owner: VRSimTeleportComponent)
+#: Meta-data for key DisplayName of member ControllerProxy in VRSimTeleportComponent (type: ObjectProperty, owner: VRSimTeleportComponent)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:ControllerProxy"
+msgid "Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:ControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member ControllerProxy in VRSimToolAdapterComponent (type: ObjectProperty, owner: VRSimToolAdapterComponent)
+#: Meta-data for key DisplayName of member ControllerProxy in VRSimToolAdapterComponent (type: ObjectProperty, owner: VRSimToolAdapterComponent)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:ControllerProxy"
+msgid "Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:DebugDirectionLength
+#. SourceLocation:	Meta-data for key DisplayName of member DebugDirectionLength in VRSimControllerProxyComponent (type: FloatProperty, owner: VRSimControllerProxyComponent)
+#: Meta-data for key DisplayName of member DebugDirectionLength in VRSimControllerProxyComponent (type: FloatProperty, owner: VRSimControllerProxyComponent)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:DebugDirectionLength"
+msgid "Debug Direction Length"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:UpdateManipulation:DeltaTime
+#. SourceLocation:	Meta-data for key DisplayName of member DeltaTime in VRSimGrabComponent:UpdateManipulation (type: FloatProperty, owner: UpdateManipulation)
+#: Meta-data for key DisplayName of member DeltaTime in VRSimGrabComponent:UpdateManipulation (type: FloatProperty, owner: UpdateManipulation)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:UpdateManipulation:DeltaTime"
+msgid "Delta Time"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:UpdateDetection:DeltaTime
+#. SourceLocation:	Meta-data for key DisplayName of member DeltaTime in VRSimInteractionComponent:UpdateDetection (type: FloatProperty, owner: UpdateDetection)
+#: Meta-data for key DisplayName of member DeltaTime in VRSimInteractionComponent:UpdateDetection (type: FloatProperty, owner: UpdateDetection)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:UpdateDetection:DeltaTime"
+msgid "Delta Time"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:AddRotationInput:DeltaTime
+#. SourceLocation:	Meta-data for key DisplayName of member DeltaTime in VRSimSpatialInputComponent:AddRotationInput (type: FloatProperty, owner: AddRotationInput)
+#: Meta-data for key DisplayName of member DeltaTime in VRSimSpatialInputComponent:AddRotationInput (type: FloatProperty, owner: AddRotationInput)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:AddRotationInput:DeltaTime"
+msgid "Delta Time"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:AddTranslationInput:DeltaTime
+#. SourceLocation:	Meta-data for key DisplayName of member DeltaTime in VRSimSpatialInputComponent:AddTranslationInput (type: FloatProperty, owner: AddTranslationInput)
+#: Meta-data for key DisplayName of member DeltaTime in VRSimSpatialInputComponent:AddTranslationInput (type: FloatProperty, owner: AddTranslationInput)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:AddTranslationInput:DeltaTime"
+msgid "Delta Time"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:UpdateDestination:DeltaTime
+#. SourceLocation:	Meta-data for key DisplayName of member DeltaTime in VRSimTeleportComponent:UpdateDestination (type: FloatProperty, owner: UpdateDestination)
+#: Meta-data for key DisplayName of member DeltaTime in VRSimTeleportComponent:UpdateDestination (type: FloatProperty, owner: UpdateDestination)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:UpdateDestination:DeltaTime"
+msgid "Delta Time"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:PlayDestinationFeedback:Destination
+#. SourceLocation:	Meta-data for key DisplayName of member Destination in VRSimFeedbackComponent:PlayDestinationFeedback (type: StructProperty, owner: PlayDestinationFeedback)
+#: Meta-data for key DisplayName of member Destination in VRSimFeedbackComponent:PlayDestinationFeedback (type: StructProperty, owner: PlayDestinationFeedback)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:PlayDestinationFeedback:Destination"
+msgid "Destination"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:SetTeleportDestination:Destination
+#. SourceLocation:	Meta-data for key DisplayName of member Destination in VRSimTeleportComponent:SetTeleportDestination (type: StructProperty, owner: SetTeleportDestination)
+#: Meta-data for key DisplayName of member Destination in VRSimTeleportComponent:SetTeleportDestination (type: StructProperty, owner: SetTeleportDestination)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:SetTeleportDestination:Destination"
+msgid "Destination"
+msgstr ""
+
+#. Key:	VRSimPortalBase:DestinationPoint
+#. SourceLocation:	Meta-data for key DisplayName of member DestinationPoint in VRSimPortalBase (type: ObjectProperty, owner: VRSimPortalBase)
+#: Meta-data for key DisplayName of member DestinationPoint in VRSimPortalBase (type: ObjectProperty, owner: VRSimPortalBase)
+msgctxt "UObjectDisplayNames,VRSimPortalBase:DestinationPoint"
+msgid "Destination Point"
+msgstr ""
+
+#. Key:	VRSimNearInteractionComponent:DrawNearInteractionDebug
+#. SourceLocation:	Meta-data for key DisplayName of member DrawNearInteractionDebug in VRSimNearInteractionComponent (type: Function, owner: DrawNearInteractionDebug)
+#: Meta-data for key DisplayName of member DrawNearInteractionDebug in VRSimNearInteractionComponent (type: Function, owner: DrawNearInteractionDebug)
+msgctxt "UObjectDisplayNames,VRSimNearInteractionComponent:DrawNearInteractionDebug"
+msgid "Draw Near Interaction Debug"
+msgstr ""
+
+#. Key:	VRSimRayInteractionComponent:DrawRayDebug
+#. SourceLocation:	Meta-data for key DisplayName of member DrawRayDebug in VRSimRayInteractionComponent (type: Function, owner: DrawRayDebug)
+#: Meta-data for key DisplayName of member DrawRayDebug in VRSimRayInteractionComponent (type: Function, owner: DrawRayDebug)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionComponent:DrawRayDebug"
+msgid "Draw Ray Debug"
+msgstr ""
+
+#. Key:	VRSimRayInteractionComponent:DrawRayDebug:End
+#. SourceLocation:	Meta-data for key DisplayName of member End in VRSimRayInteractionComponent:DrawRayDebug (type: StructProperty, owner: DrawRayDebug)
+#: Meta-data for key DisplayName of member End in VRSimRayInteractionComponent:DrawRayDebug (type: StructProperty, owner: DrawRayDebug)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionComponent:DrawRayDebug:End"
+msgid "End"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:ExecutePrimaryAction
+#. SourceLocation:	Meta-data for key DisplayName of member ExecutePrimaryAction in VRSimToolAdapterComponent (type: Function, owner: ExecutePrimaryAction)
+#: Meta-data for key DisplayName of member ExecutePrimaryAction in VRSimToolAdapterComponent (type: Function, owner: ExecutePrimaryAction)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:ExecutePrimaryAction"
+msgid "Execute Primary Action"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:ExecuteSecondaryAction
+#. SourceLocation:	Meta-data for key DisplayName of member ExecuteSecondaryAction in VRSimToolAdapterComponent (type: Function, owner: ExecuteSecondaryAction)
+#: Meta-data for key DisplayName of member ExecuteSecondaryAction in VRSimToolAdapterComponent (type: Function, owner: ExecuteSecondaryAction)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:ExecuteSecondaryAction"
+msgid "Execute Secondary Action"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:GetActionDirection
+#. SourceLocation:	Meta-data for key DisplayName of member GetActionDirection in VRSimToolAdapterComponent (type: Function, owner: GetActionDirection)
+#: Meta-data for key DisplayName of member GetActionDirection in VRSimToolAdapterComponent (type: Function, owner: GetActionDirection)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:GetActionDirection"
+msgid "Get Action Direction"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:GetActionOrigin
+#. SourceLocation:	Meta-data for key DisplayName of member GetActionOrigin in VRSimToolAdapterComponent (type: Function, owner: GetActionOrigin)
+#: Meta-data for key DisplayName of member GetActionOrigin in VRSimToolAdapterComponent (type: Function, owner: GetActionOrigin)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:GetActionOrigin"
+msgid "Get Action Origin"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:GetCandidateTarget
+#. SourceLocation:	Meta-data for key DisplayName of member GetCandidateTarget in VRSimGrabComponent (type: Function, owner: GetCandidateTarget)
+#: Meta-data for key DisplayName of member GetCandidateTarget in VRSimGrabComponent (type: Function, owner: GetCandidateTarget)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:GetCandidateTarget"
+msgid "Get Candidate Target"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:GetControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member GetControllerProxy in VRSimInteractionComponent (type: Function, owner: GetControllerProxy)
+#: Meta-data for key DisplayName of member GetControllerProxy in VRSimInteractionComponent (type: Function, owner: GetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:GetControllerProxy"
+msgid "Get Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:GetControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member GetControllerProxy in VRSimSpatialInputComponent (type: Function, owner: GetControllerProxy)
+#: Meta-data for key DisplayName of member GetControllerProxy in VRSimSpatialInputComponent (type: Function, owner: GetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:GetControllerProxy"
+msgid "Get Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:GetControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member GetControllerProxy in VRSimTeleportComponent (type: Function, owner: GetControllerProxy)
+#: Meta-data for key DisplayName of member GetControllerProxy in VRSimTeleportComponent (type: Function, owner: GetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:GetControllerProxy"
+msgid "Get Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:GetControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member GetControllerProxy in VRSimToolAdapterComponent (type: Function, owner: GetControllerProxy)
+#: Meta-data for key DisplayName of member GetControllerProxy in VRSimToolAdapterComponent (type: Function, owner: GetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:GetControllerProxy"
+msgid "Get Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimPortalBase:GetDestinationTransform
+#. SourceLocation:	Meta-data for key DisplayName of member GetDestinationTransform in VRSimPortalBase (type: Function, owner: GetDestinationTransform)
+#: Meta-data for key DisplayName of member GetDestinationTransform in VRSimPortalBase (type: Function, owner: GetDestinationTransform)
+msgctxt "UObjectDisplayNames,VRSimPortalBase:GetDestinationTransform"
+msgid "Get Destination Transform"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetForwardDirection
+#. SourceLocation:	Meta-data for key DisplayName of member GetForwardDirection in VRSimControllerProxyComponent (type: Function, owner: GetForwardDirection)
+#: Meta-data for key DisplayName of member GetForwardDirection in VRSimControllerProxyComponent (type: Function, owner: GetForwardDirection)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetForwardDirection"
+msgid "Get Forward Direction"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetGrabAttachTransform
+#. SourceLocation:	Meta-data for key DisplayName of member GetGrabAttachTransform in VRSimControllerProxyComponent (type: Function, owner: GetGrabAttachTransform)
+#: Meta-data for key DisplayName of member GetGrabAttachTransform in VRSimControllerProxyComponent (type: Function, owner: GetGrabAttachTransform)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetGrabAttachTransform"
+msgid "Get Grab Attach Transform"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:GetGrabAttachTransform
+#. SourceLocation:	Meta-data for key DisplayName of member GetGrabAttachTransform in VRSimGrabComponent (type: Function, owner: GetGrabAttachTransform)
+#: Meta-data for key DisplayName of member GetGrabAttachTransform in VRSimGrabComponent (type: Function, owner: GetGrabAttachTransform)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:GetGrabAttachTransform"
+msgid "Get Grab Attach Transform"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:GetGrabbedTarget
+#. SourceLocation:	Meta-data for key DisplayName of member GetGrabbedTarget in VRSimGrabComponent (type: Function, owner: GetGrabbedTarget)
+#: Meta-data for key DisplayName of member GetGrabbedTarget in VRSimGrabComponent (type: Function, owner: GetGrabbedTarget)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:GetGrabbedTarget"
+msgid "Get Grabbed Target"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:GetInteractionComponent
+#. SourceLocation:	Meta-data for key DisplayName of member GetInteractionComponent in VRSimGrabComponent (type: Function, owner: GetInteractionComponent)
+#: Meta-data for key DisplayName of member GetInteractionComponent in VRSimGrabComponent (type: Function, owner: GetInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:GetInteractionComponent"
+msgid "Get Interaction Component"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:GetInteractionDirection
+#. SourceLocation:	Meta-data for key DisplayName of member GetInteractionDirection in VRSimInteractionComponent (type: Function, owner: GetInteractionDirection)
+#: Meta-data for key DisplayName of member GetInteractionDirection in VRSimInteractionComponent (type: Function, owner: GetInteractionDirection)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:GetInteractionDirection"
+msgid "Get Interaction Direction"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:GetInteractionOrigin
+#. SourceLocation:	Meta-data for key DisplayName of member GetInteractionOrigin in VRSimInteractionComponent (type: Function, owner: GetInteractionOrigin)
+#: Meta-data for key DisplayName of member GetInteractionOrigin in VRSimInteractionComponent (type: Function, owner: GetInteractionOrigin)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:GetInteractionOrigin"
+msgid "Get Interaction Origin"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetNearInteractionOrigin
+#. SourceLocation:	Meta-data for key DisplayName of member GetNearInteractionOrigin in VRSimControllerProxyComponent (type: Function, owner: GetNearInteractionOrigin)
+#: Meta-data for key DisplayName of member GetNearInteractionOrigin in VRSimControllerProxyComponent (type: Function, owner: GetNearInteractionOrigin)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetNearInteractionOrigin"
+msgid "Get Near Interaction Origin"
+msgstr ""
+
+#. Key:	VRSimNearInteractionComponent:GetNearInteractionOrigin
+#. SourceLocation:	Meta-data for key DisplayName of member GetNearInteractionOrigin in VRSimNearInteractionComponent (type: Function, owner: GetNearInteractionOrigin)
+#: Meta-data for key DisplayName of member GetNearInteractionOrigin in VRSimNearInteractionComponent (type: Function, owner: GetNearInteractionOrigin)
+msgctxt "UObjectDisplayNames,VRSimNearInteractionComponent:GetNearInteractionOrigin"
+msgid "Get Near Interaction Origin"
+msgstr ""
+
+#. Key:	VRSimRayInteractionComponent:GetRayEnd
+#. SourceLocation:	Meta-data for key DisplayName of member GetRayEnd in VRSimRayInteractionComponent (type: Function, owner: GetRayEnd)
+#: Meta-data for key DisplayName of member GetRayEnd in VRSimRayInteractionComponent (type: Function, owner: GetRayEnd)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionComponent:GetRayEnd"
+msgid "Get Ray End"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetRayOrigin
+#. SourceLocation:	Meta-data for key DisplayName of member GetRayOrigin in VRSimControllerProxyComponent (type: Function, owner: GetRayOrigin)
+#: Meta-data for key DisplayName of member GetRayOrigin in VRSimControllerProxyComponent (type: Function, owner: GetRayOrigin)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetRayOrigin"
+msgid "Get Ray Origin"
+msgstr ""
+
+#. Key:	VRSimRayInteractionComponent:GetRayStart
+#. SourceLocation:	Meta-data for key DisplayName of member GetRayStart in VRSimRayInteractionComponent (type: Function, owner: GetRayStart)
+#: Meta-data for key DisplayName of member GetRayStart in VRSimRayInteractionComponent (type: Function, owner: GetRayStart)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionComponent:GetRayStart"
+msgid "Get Ray Start"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:GetSelectedTarget
+#. SourceLocation:	Meta-data for key DisplayName of member GetSelectedTarget in VRSimInteractionComponent (type: Function, owner: GetSelectedTarget)
+#: Meta-data for key DisplayName of member GetSelectedTarget in VRSimInteractionComponent (type: Function, owner: GetSelectedTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:GetSelectedTarget"
+msgid "Get Selected Target"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:GetTeleportDestination
+#. SourceLocation:	Meta-data for key DisplayName of member GetTeleportDestination in VRSimTeleportComponent (type: Function, owner: GetTeleportDestination)
+#: Meta-data for key DisplayName of member GetTeleportDestination in VRSimTeleportComponent (type: Function, owner: GetTeleportDestination)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:GetTeleportDestination"
+msgid "Get Teleport Destination"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:GetTeleportDirection
+#. SourceLocation:	Meta-data for key DisplayName of member GetTeleportDirection in VRSimTeleportComponent (type: Function, owner: GetTeleportDirection)
+#: Meta-data for key DisplayName of member GetTeleportDirection in VRSimTeleportComponent (type: Function, owner: GetTeleportDirection)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:GetTeleportDirection"
+msgid "Get Teleport Direction"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:GetTeleportOrigin
+#. SourceLocation:	Meta-data for key DisplayName of member GetTeleportOrigin in VRSimTeleportComponent (type: Function, owner: GetTeleportOrigin)
+#: Meta-data for key DisplayName of member GetTeleportOrigin in VRSimTeleportComponent (type: Function, owner: GetTeleportOrigin)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:GetTeleportOrigin"
+msgid "Get Teleport Origin"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetWorldPosition
+#. SourceLocation:	Meta-data for key DisplayName of member GetWorldPosition in VRSimControllerProxyComponent (type: Function, owner: GetWorldPosition)
+#: Meta-data for key DisplayName of member GetWorldPosition in VRSimControllerProxyComponent (type: Function, owner: GetWorldPosition)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetWorldPosition"
+msgid "Get World Position"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetWorldRotation
+#. SourceLocation:	Meta-data for key DisplayName of member GetWorldRotation in VRSimControllerProxyComponent (type: Function, owner: GetWorldRotation)
+#: Meta-data for key DisplayName of member GetWorldRotation in VRSimControllerProxyComponent (type: Function, owner: GetWorldRotation)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetWorldRotation"
+msgid "Get World Rotation"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GrabAttachOffset
+#. SourceLocation:	Meta-data for key DisplayName of member GrabAttachOffset in VRSimControllerProxyComponent (type: StructProperty, owner: VRSimControllerProxyComponent)
+#: Meta-data for key DisplayName of member GrabAttachOffset in VRSimControllerProxyComponent (type: StructProperty, owner: VRSimControllerProxyComponent)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GrabAttachOffset"
+msgid "Grab Attach Offset"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:GrabbedTarget
+#. SourceLocation:	Meta-data for key DisplayName of member GrabbedTarget in VRSimGrabComponent (type: ObjectProperty, owner: VRSimGrabComponent)
+#: Meta-data for key DisplayName of member GrabbedTarget in VRSimGrabComponent (type: ObjectProperty, owner: VRSimGrabComponent)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:GrabbedTarget"
+msgid "Grabbed Target"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:HasValidTeleportDestination
+#. SourceLocation:	Meta-data for key DisplayName of member HasValidTeleportDestination in VRSimTeleportComponent (type: Function, owner: HasValidTeleportDestination)
+#: Meta-data for key DisplayName of member HasValidTeleportDestination in VRSimTeleportComponent (type: Function, owner: HasValidTeleportDestination)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:HasValidTeleportDestination"
+msgid "Has Valid Teleport Destination"
+msgstr ""
+
+#. Key:	VRSimRayInteractionComponent:DrawRayDebug:HitResult
+#. SourceLocation:	Meta-data for key DisplayName of member HitResult in VRSimRayInteractionComponent:DrawRayDebug (type: StructProperty, owner: DrawRayDebug)
+#: Meta-data for key DisplayName of member HitResult in VRSimRayInteractionComponent:DrawRayDebug (type: StructProperty, owner: DrawRayDebug)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionComponent:DrawRayDebug:HitResult"
+msgid "Hit Result"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:SetControllerProxy:InControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member InControllerProxy in VRSimInteractionComponent:SetControllerProxy (type: ObjectProperty, owner: SetControllerProxy)
+#: Meta-data for key DisplayName of member InControllerProxy in VRSimInteractionComponent:SetControllerProxy (type: ObjectProperty, owner: SetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:SetControllerProxy:InControllerProxy"
+msgid "In Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:SetControllerProxy:InControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member InControllerProxy in VRSimSpatialInputComponent:SetControllerProxy (type: ObjectProperty, owner: SetControllerProxy)
+#: Meta-data for key DisplayName of member InControllerProxy in VRSimSpatialInputComponent:SetControllerProxy (type: ObjectProperty, owner: SetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:SetControllerProxy:InControllerProxy"
+msgid "In Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:SetControllerProxy:InControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member InControllerProxy in VRSimTeleportComponent:SetControllerProxy (type: ObjectProperty, owner: SetControllerProxy)
+#: Meta-data for key DisplayName of member InControllerProxy in VRSimTeleportComponent:SetControllerProxy (type: ObjectProperty, owner: SetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:SetControllerProxy:InControllerProxy"
+msgid "In Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:SetControllerProxy:InControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member InControllerProxy in VRSimToolAdapterComponent:SetControllerProxy (type: ObjectProperty, owner: SetControllerProxy)
+#: Meta-data for key DisplayName of member InControllerProxy in VRSimToolAdapterComponent:SetControllerProxy (type: ObjectProperty, owner: SetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:SetControllerProxy:InControllerProxy"
+msgid "In Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:SetInteractionComponent:InInteractionComponent
+#. SourceLocation:	Meta-data for key DisplayName of member InInteractionComponent in VRSimGrabComponent:SetInteractionComponent (type: ObjectProperty, owner: SetInteractionComponent)
+#: Meta-data for key DisplayName of member InInteractionComponent in VRSimGrabComponent:SetInteractionComponent (type: ObjectProperty, owner: SetInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:SetInteractionComponent:InInteractionComponent"
+msgid "In Interaction Component"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:AddRotationInput:Input
+#. SourceLocation:	Meta-data for key DisplayName of member Input in VRSimSpatialInputComponent:AddRotationInput (type: StructProperty, owner: AddRotationInput)
+#: Meta-data for key DisplayName of member Input in VRSimSpatialInputComponent:AddRotationInput (type: StructProperty, owner: AddRotationInput)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:AddRotationInput:Input"
+msgid "Input"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:AddTranslationInput:Input
+#. SourceLocation:	Meta-data for key DisplayName of member Input in VRSimSpatialInputComponent:AddTranslationInput (type: StructProperty, owner: AddTranslationInput)
+#: Meta-data for key DisplayName of member Input in VRSimSpatialInputComponent:AddTranslationInput (type: StructProperty, owner: AddTranslationInput)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:AddTranslationInput:Input"
+msgid "Input"
+msgstr ""
+
+#. Key:	VRSimInteractable:Interact
+#. SourceLocation:	Meta-data for key DisplayName of member Interact in VRSimInteractable (type: Function, owner: Interact)
+#: Meta-data for key DisplayName of member Interact in VRSimInteractable (type: Function, owner: Interact)
+msgctxt "UObjectDisplayNames,VRSimInteractable:Interact"
+msgid "Interact"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:InteractionComponent
+#. SourceLocation:	Meta-data for key DisplayName of member InteractionComponent in VRSimGrabComponent (type: ObjectProperty, owner: VRSimGrabComponent)
+#: Meta-data for key DisplayName of member InteractionComponent in VRSimGrabComponent (type: ObjectProperty, owner: VRSimGrabComponent)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:InteractionComponent"
+msgid "Interaction Component"
+msgstr ""
+
+#. Key:	VRSimNearInteractionComponent:InteractionRadius
+#. SourceLocation:	Meta-data for key DisplayName of member InteractionRadius in VRSimNearInteractionComponent (type: FloatProperty, owner: VRSimNearInteractionComponent)
+#: Meta-data for key DisplayName of member InteractionRadius in VRSimNearInteractionComponent (type: FloatProperty, owner: VRSimNearInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimNearInteractionComponent:InteractionRadius"
+msgid "Interaction Radius"
+msgstr ""
+
+#. Key:	VRSimInteractable:CanInteract:InteractionSource
+#. SourceLocation:	Meta-data for key DisplayName of member InteractionSource in VRSimInteractable:CanInteract (type: ObjectProperty, owner: CanInteract)
+#: Meta-data for key DisplayName of member InteractionSource in VRSimInteractable:CanInteract (type: ObjectProperty, owner: CanInteract)
+msgctxt "UObjectDisplayNames,VRSimInteractable:CanInteract:InteractionSource"
+msgid "Interaction Source"
+msgstr ""
+
+#. Key:	VRSimInteractable:Interact:InteractionSource
+#. SourceLocation:	Meta-data for key DisplayName of member InteractionSource in VRSimInteractable:Interact (type: ObjectProperty, owner: Interact)
+#: Meta-data for key DisplayName of member InteractionSource in VRSimInteractable:Interact (type: ObjectProperty, owner: Interact)
+msgctxt "UObjectDisplayNames,VRSimInteractable:Interact:InteractionSource"
+msgid "Interaction Source"
+msgstr ""
+
+#. Key:	VRSimInteractable:OnDeselected:InteractionSource
+#. SourceLocation:	Meta-data for key DisplayName of member InteractionSource in VRSimInteractable:OnDeselected (type: ObjectProperty, owner: OnDeselected)
+#: Meta-data for key DisplayName of member InteractionSource in VRSimInteractable:OnDeselected (type: ObjectProperty, owner: OnDeselected)
+msgctxt "UObjectDisplayNames,VRSimInteractable:OnDeselected:InteractionSource"
+msgid "Interaction Source"
+msgstr ""
+
+#. Key:	VRSimInteractable:OnSelected:InteractionSource
+#. SourceLocation:	Meta-data for key DisplayName of member InteractionSource in VRSimInteractable:OnSelected (type: ObjectProperty, owner: OnSelected)
+#: Meta-data for key DisplayName of member InteractionSource in VRSimInteractable:OnSelected (type: ObjectProperty, owner: OnSelected)
+msgctxt "UObjectDisplayNames,VRSimInteractable:OnSelected:InteractionSource"
+msgid "Interaction Source"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:ReceiveInteraction:InteractionSource
+#. SourceLocation:	Meta-data for key DisplayName of member InteractionSource in VRSimInteractableTarget:ReceiveInteraction (type: ObjectProperty, owner: ReceiveInteraction)
+#: Meta-data for key DisplayName of member InteractionSource in VRSimInteractableTarget:ReceiveInteraction (type: ObjectProperty, owner: ReceiveInteraction)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:ReceiveInteraction:InteractionSource"
+msgid "Interaction Source"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:ReceiveSelectionChanged:InteractionSource
+#. SourceLocation:	Meta-data for key DisplayName of member InteractionSource in VRSimInteractableTarget:ReceiveSelectionChanged (type: ObjectProperty, owner: ReceiveSelectionChanged)
+#: Meta-data for key DisplayName of member InteractionSource in VRSimInteractableTarget:ReceiveSelectionChanged (type: ObjectProperty, owner: ReceiveSelectionChanged)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:ReceiveSelectionChanged:InteractionSource"
+msgid "Interaction Source"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:IsDebugEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member IsDebugEnabled in VRSimControllerProxyComponent (type: Function, owner: IsDebugEnabled)
+#: Meta-data for key DisplayName of member IsDebugEnabled in VRSimControllerProxyComponent (type: Function, owner: IsDebugEnabled)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:IsDebugEnabled"
+msgid "Is Debug Enabled"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:IsDebugEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member IsDebugEnabled in VRSimInteractionComponent (type: Function, owner: IsDebugEnabled)
+#: Meta-data for key DisplayName of member IsDebugEnabled in VRSimInteractionComponent (type: Function, owner: IsDebugEnabled)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:IsDebugEnabled"
+msgid "Is Debug Enabled"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:IsFeedbackEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member IsFeedbackEnabled in VRSimFeedbackComponent (type: Function, owner: IsFeedbackEnabled)
+#: Meta-data for key DisplayName of member IsFeedbackEnabled in VRSimFeedbackComponent (type: Function, owner: IsFeedbackEnabled)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:IsFeedbackEnabled"
+msgid "Is Feedback Enabled"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:IsGrabbing
+#. SourceLocation:	Meta-data for key DisplayName of member IsGrabbing in VRSimGrabComponent (type: Function, owner: IsGrabbing)
+#: Meta-data for key DisplayName of member IsGrabbing in VRSimGrabComponent (type: Function, owner: IsGrabbing)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:IsGrabbing"
+msgid "Is Grabbing"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:IsInteractableTarget
+#. SourceLocation:	Meta-data for key DisplayName of member IsInteractableTarget in VRSimInteractionComponent (type: Function, owner: IsInteractableTarget)
+#: Meta-data for key DisplayName of member IsInteractableTarget in VRSimInteractionComponent (type: Function, owner: IsInteractableTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:IsInteractableTarget"
+msgid "Is Interactable Target"
+msgstr ""
+
+#. Key:	VRSimPortalBase:IsPortalEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member IsPortalEnabled in VRSimPortalBase (type: Function, owner: IsPortalEnabled)
+#: Meta-data for key DisplayName of member IsPortalEnabled in VRSimPortalBase (type: Function, owner: IsPortalEnabled)
+msgctxt "UObjectDisplayNames,VRSimPortalBase:IsPortalEnabled"
+msgid "Is Portal Enabled"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:IsSelected
+#. SourceLocation:	Meta-data for key DisplayName of member IsSelected in VRSimInteractableTarget (type: Function, owner: IsSelected)
+#: Meta-data for key DisplayName of member IsSelected in VRSimInteractableTarget (type: Function, owner: IsSelected)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:IsSelected"
+msgid "Is Selected"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:IsSpatialInputEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member IsSpatialInputEnabled in VRSimSpatialInputComponent (type: Function, owner: IsSpatialInputEnabled)
+#: Meta-data for key DisplayName of member IsSpatialInputEnabled in VRSimSpatialInputComponent (type: Function, owner: IsSpatialInputEnabled)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:IsSpatialInputEnabled"
+msgid "Is Spatial Input Enabled"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:NearInteractionOriginOffset
+#. SourceLocation:	Meta-data for key DisplayName of member NearInteractionOriginOffset in VRSimControllerProxyComponent (type: StructProperty, owner: VRSimControllerProxyComponent)
+#: Meta-data for key DisplayName of member NearInteractionOriginOffset in VRSimControllerProxyComponent (type: StructProperty, owner: VRSimControllerProxyComponent)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:NearInteractionOriginOffset"
+msgid "Near Interaction Origin Offset"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:NearInteractionRadius
+#. SourceLocation:	Meta-data for key DisplayName of member NearInteractionRadius in VRSimControllerProxyComponent (type: FloatProperty, owner: VRSimControllerProxyComponent)
+#: Meta-data for key DisplayName of member NearInteractionRadius in VRSimControllerProxyComponent (type: FloatProperty, owner: VRSimControllerProxyComponent)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:NearInteractionRadius"
+msgid "Near Interaction Radius"
+msgstr ""
+
+#. Key:	VRSimInteractable:OnDeselected
+#. SourceLocation:	Meta-data for key DisplayName of member OnDeselected in VRSimInteractable (type: Function, owner: OnDeselected)
+#: Meta-data for key DisplayName of member OnDeselected in VRSimInteractable (type: Function, owner: OnDeselected)
+msgctxt "UObjectDisplayNames,VRSimInteractable:OnDeselected"
+msgid "On Deselected"
+msgstr ""
+
+#. Key:	VRSimInteractable:OnSelected
+#. SourceLocation:	Meta-data for key DisplayName of member OnSelected in VRSimInteractable (type: Function, owner: OnSelected)
+#: Meta-data for key DisplayName of member OnSelected in VRSimInteractable (type: Function, owner: OnSelected)
+msgctxt "UObjectDisplayNames,VRSimInteractable:OnSelected"
+msgid "On Selected"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:PlayDestinationFeedback
+#. SourceLocation:	Meta-data for key DisplayName of member PlayDestinationFeedback in VRSimFeedbackComponent (type: Function, owner: PlayDestinationFeedback)
+#: Meta-data for key DisplayName of member PlayDestinationFeedback in VRSimFeedbackComponent (type: Function, owner: PlayDestinationFeedback)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:PlayDestinationFeedback"
+msgid "Play Destination Feedback"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:PlayInteractionFeedback
+#. SourceLocation:	Meta-data for key DisplayName of member PlayInteractionFeedback in VRSimFeedbackComponent (type: Function, owner: PlayInteractionFeedback)
+#: Meta-data for key DisplayName of member PlayInteractionFeedback in VRSimFeedbackComponent (type: Function, owner: PlayInteractionFeedback)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:PlayInteractionFeedback"
+msgid "Play Interaction Feedback"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:PlaySelectionFeedback
+#. SourceLocation:	Meta-data for key DisplayName of member PlaySelectionFeedback in VRSimFeedbackComponent (type: Function, owner: PlaySelectionFeedback)
+#: Meta-data for key DisplayName of member PlaySelectionFeedback in VRSimFeedbackComponent (type: Function, owner: PlaySelectionFeedback)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:PlaySelectionFeedback"
+msgid "Play Selection Feedback"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:RayOriginOffset
+#. SourceLocation:	Meta-data for key DisplayName of member RayOriginOffset in VRSimControllerProxyComponent (type: StructProperty, owner: VRSimControllerProxyComponent)
+#: Meta-data for key DisplayName of member RayOriginOffset in VRSimControllerProxyComponent (type: StructProperty, owner: VRSimControllerProxyComponent)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:RayOriginOffset"
+msgid "Ray Origin Offset"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:ReceiveInteraction
+#. SourceLocation:	Meta-data for key DisplayName of member ReceiveInteraction in VRSimInteractableTarget (type: Function, owner: ReceiveInteraction)
+#: Meta-data for key DisplayName of member ReceiveInteraction in VRSimInteractableTarget (type: Function, owner: ReceiveInteraction)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:ReceiveInteraction"
+msgid "On Interaction"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:ReceiveSelectionChanged
+#. SourceLocation:	Meta-data for key DisplayName of member ReceiveSelectionChanged in VRSimInteractableTarget (type: Function, owner: ReceiveSelectionChanged)
+#: Meta-data for key DisplayName of member ReceiveSelectionChanged in VRSimInteractableTarget (type: Function, owner: ReceiveSelectionChanged)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:ReceiveSelectionChanged"
+msgid "On Selection Changed"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:ResetProxyPose
+#. SourceLocation:	Meta-data for key DisplayName of member ResetProxyPose in VRSimSpatialInputComponent (type: Function, owner: ResetProxyPose)
+#: Meta-data for key DisplayName of member ResetProxyPose in VRSimSpatialInputComponent (type: Function, owner: ResetProxyPose)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:ResetProxyPose"
+msgid "Reset Proxy Pose"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetForwardDirection:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetForwardDirection (type: StructProperty, owner: GetForwardDirection)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetForwardDirection (type: StructProperty, owner: GetForwardDirection)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetForwardDirection:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetGrabAttachTransform:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetGrabAttachTransform (type: StructProperty, owner: GetGrabAttachTransform)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetGrabAttachTransform (type: StructProperty, owner: GetGrabAttachTransform)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetGrabAttachTransform:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetNearInteractionOrigin:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetNearInteractionOrigin (type: StructProperty, owner: GetNearInteractionOrigin)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetNearInteractionOrigin (type: StructProperty, owner: GetNearInteractionOrigin)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetNearInteractionOrigin:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetRayOrigin:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetRayOrigin (type: StructProperty, owner: GetRayOrigin)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetRayOrigin (type: StructProperty, owner: GetRayOrigin)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetRayOrigin:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetWorldPosition:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetWorldPosition (type: StructProperty, owner: GetWorldPosition)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetWorldPosition (type: StructProperty, owner: GetWorldPosition)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetWorldPosition:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:GetWorldRotation:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetWorldRotation (type: StructProperty, owner: GetWorldRotation)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:GetWorldRotation (type: StructProperty, owner: GetWorldRotation)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:GetWorldRotation:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:IsDebugEnabled:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:IsDebugEnabled (type: BoolProperty, owner: IsDebugEnabled)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimControllerProxyComponent:IsDebugEnabled (type: BoolProperty, owner: IsDebugEnabled)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:IsDebugEnabled:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:IsFeedbackEnabled:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimFeedbackComponent:IsFeedbackEnabled (type: BoolProperty, owner: IsFeedbackEnabled)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimFeedbackComponent:IsFeedbackEnabled (type: BoolProperty, owner: IsFeedbackEnabled)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:IsFeedbackEnabled:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:GetCandidateTarget:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:GetCandidateTarget (type: ObjectProperty, owner: GetCandidateTarget)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:GetCandidateTarget (type: ObjectProperty, owner: GetCandidateTarget)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:GetCandidateTarget:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:GetGrabAttachTransform:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:GetGrabAttachTransform (type: StructProperty, owner: GetGrabAttachTransform)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:GetGrabAttachTransform (type: StructProperty, owner: GetGrabAttachTransform)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:GetGrabAttachTransform:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:GetGrabbedTarget:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:GetGrabbedTarget (type: ObjectProperty, owner: GetGrabbedTarget)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:GetGrabbedTarget (type: ObjectProperty, owner: GetGrabbedTarget)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:GetGrabbedTarget:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:GetInteractionComponent:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:GetInteractionComponent (type: ObjectProperty, owner: GetInteractionComponent)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:GetInteractionComponent (type: ObjectProperty, owner: GetInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:GetInteractionComponent:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:IsGrabbing:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:IsGrabbing (type: BoolProperty, owner: IsGrabbing)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:IsGrabbing (type: BoolProperty, owner: IsGrabbing)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:IsGrabbing:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:SetGrabbedTarget:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:SetGrabbedTarget (type: BoolProperty, owner: SetGrabbedTarget)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:SetGrabbedTarget (type: BoolProperty, owner: SetGrabbedTarget)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:SetGrabbedTarget:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:TryGrab:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:TryGrab (type: BoolProperty, owner: TryGrab)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:TryGrab (type: BoolProperty, owner: TryGrab)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:TryGrab:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:TryRelease:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:TryRelease (type: BoolProperty, owner: TryRelease)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimGrabComponent:TryRelease (type: BoolProperty, owner: TryRelease)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:TryRelease:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimInteractable:CanInteract:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimInteractable:CanInteract (type: BoolProperty, owner: CanInteract)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimInteractable:CanInteract (type: BoolProperty, owner: CanInteract)
+msgctxt "UObjectDisplayNames,VRSimInteractable:CanInteract:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:IsSelected:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimInteractableTarget:IsSelected (type: BoolProperty, owner: IsSelected)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimInteractableTarget:IsSelected (type: BoolProperty, owner: IsSelected)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:IsSelected:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:GetControllerProxy:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:GetControllerProxy (type: ObjectProperty, owner: GetControllerProxy)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:GetControllerProxy (type: ObjectProperty, owner: GetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:GetControllerProxy:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:GetInteractionDirection:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:GetInteractionDirection (type: StructProperty, owner: GetInteractionDirection)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:GetInteractionDirection (type: StructProperty, owner: GetInteractionDirection)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:GetInteractionDirection:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:GetInteractionOrigin:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:GetInteractionOrigin (type: StructProperty, owner: GetInteractionOrigin)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:GetInteractionOrigin (type: StructProperty, owner: GetInteractionOrigin)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:GetInteractionOrigin:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:GetSelectedTarget:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:GetSelectedTarget (type: ObjectProperty, owner: GetSelectedTarget)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:GetSelectedTarget (type: ObjectProperty, owner: GetSelectedTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:GetSelectedTarget:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:IsDebugEnabled:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:IsDebugEnabled (type: BoolProperty, owner: IsDebugEnabled)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:IsDebugEnabled (type: BoolProperty, owner: IsDebugEnabled)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:IsDebugEnabled:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:IsInteractableTarget:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:IsInteractableTarget (type: BoolProperty, owner: IsInteractableTarget)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:IsInteractableTarget (type: BoolProperty, owner: IsInteractableTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:IsInteractableTarget:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:SetSelectedTarget:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:SetSelectedTarget (type: BoolProperty, owner: SetSelectedTarget)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:SetSelectedTarget (type: BoolProperty, owner: SetSelectedTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:SetSelectedTarget:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:TryInteract:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:TryInteract (type: BoolProperty, owner: TryInteract)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimInteractionComponent:TryInteract (type: BoolProperty, owner: TryInteract)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:TryInteract:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimNearInteractionComponent:GetNearInteractionOrigin:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimNearInteractionComponent:GetNearInteractionOrigin (type: StructProperty, owner: GetNearInteractionOrigin)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimNearInteractionComponent:GetNearInteractionOrigin (type: StructProperty, owner: GetNearInteractionOrigin)
+msgctxt "UObjectDisplayNames,VRSimNearInteractionComponent:GetNearInteractionOrigin:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimPortalBase:GetDestinationTransform:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimPortalBase:GetDestinationTransform (type: StructProperty, owner: GetDestinationTransform)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimPortalBase:GetDestinationTransform (type: StructProperty, owner: GetDestinationTransform)
+msgctxt "UObjectDisplayNames,VRSimPortalBase:GetDestinationTransform:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimPortalBase:IsPortalEnabled:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimPortalBase:IsPortalEnabled (type: BoolProperty, owner: IsPortalEnabled)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimPortalBase:IsPortalEnabled (type: BoolProperty, owner: IsPortalEnabled)
+msgctxt "UObjectDisplayNames,VRSimPortalBase:IsPortalEnabled:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimPortalBase:TryActivatePortal:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimPortalBase:TryActivatePortal (type: BoolProperty, owner: TryActivatePortal)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimPortalBase:TryActivatePortal (type: BoolProperty, owner: TryActivatePortal)
+msgctxt "UObjectDisplayNames,VRSimPortalBase:TryActivatePortal:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimRayInteractionComponent:GetRayEnd:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimRayInteractionComponent:GetRayEnd (type: StructProperty, owner: GetRayEnd)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimRayInteractionComponent:GetRayEnd (type: StructProperty, owner: GetRayEnd)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionComponent:GetRayEnd:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimRayInteractionComponent:GetRayStart:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimRayInteractionComponent:GetRayStart (type: StructProperty, owner: GetRayStart)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimRayInteractionComponent:GetRayStart (type: StructProperty, owner: GetRayStart)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionComponent:GetRayStart:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:GetControllerProxy:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimSpatialInputComponent:GetControllerProxy (type: ObjectProperty, owner: GetControllerProxy)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimSpatialInputComponent:GetControllerProxy (type: ObjectProperty, owner: GetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:GetControllerProxy:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:IsSpatialInputEnabled:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimSpatialInputComponent:IsSpatialInputEnabled (type: BoolProperty, owner: IsSpatialInputEnabled)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimSpatialInputComponent:IsSpatialInputEnabled (type: BoolProperty, owner: IsSpatialInputEnabled)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:IsSpatialInputEnabled:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:GetControllerProxy:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:GetControllerProxy (type: ObjectProperty, owner: GetControllerProxy)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:GetControllerProxy (type: ObjectProperty, owner: GetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:GetControllerProxy:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:GetTeleportDestination:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:GetTeleportDestination (type: StructProperty, owner: GetTeleportDestination)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:GetTeleportDestination (type: StructProperty, owner: GetTeleportDestination)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:GetTeleportDestination:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:GetTeleportDirection:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:GetTeleportDirection (type: StructProperty, owner: GetTeleportDirection)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:GetTeleportDirection (type: StructProperty, owner: GetTeleportDirection)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:GetTeleportDirection:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:GetTeleportOrigin:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:GetTeleportOrigin (type: StructProperty, owner: GetTeleportOrigin)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:GetTeleportOrigin (type: StructProperty, owner: GetTeleportOrigin)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:GetTeleportOrigin:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:HasValidTeleportDestination:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:HasValidTeleportDestination (type: BoolProperty, owner: HasValidTeleportDestination)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:HasValidTeleportDestination (type: BoolProperty, owner: HasValidTeleportDestination)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:HasValidTeleportDestination:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:TryTeleport:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:TryTeleport (type: BoolProperty, owner: TryTeleport)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimTeleportComponent:TryTeleport (type: BoolProperty, owner: TryTeleport)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:TryTeleport:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:ExecutePrimaryAction:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimToolAdapterComponent:ExecutePrimaryAction (type: BoolProperty, owner: ExecutePrimaryAction)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimToolAdapterComponent:ExecutePrimaryAction (type: BoolProperty, owner: ExecutePrimaryAction)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:ExecutePrimaryAction:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:ExecuteSecondaryAction:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimToolAdapterComponent:ExecuteSecondaryAction (type: BoolProperty, owner: ExecuteSecondaryAction)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimToolAdapterComponent:ExecuteSecondaryAction (type: BoolProperty, owner: ExecuteSecondaryAction)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:ExecuteSecondaryAction:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:GetActionDirection:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimToolAdapterComponent:GetActionDirection (type: StructProperty, owner: GetActionDirection)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimToolAdapterComponent:GetActionDirection (type: StructProperty, owner: GetActionDirection)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:GetActionDirection:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:GetActionOrigin:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimToolAdapterComponent:GetActionOrigin (type: StructProperty, owner: GetActionOrigin)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimToolAdapterComponent:GetActionOrigin (type: StructProperty, owner: GetActionOrigin)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:GetActionOrigin:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:GetControllerProxy:ReturnValue
+#. SourceLocation:	Meta-data for key DisplayName of member ReturnValue in VRSimToolAdapterComponent:GetControllerProxy (type: ObjectProperty, owner: GetControllerProxy)
+#: Meta-data for key DisplayName of member ReturnValue in VRSimToolAdapterComponent:GetControllerProxy (type: ObjectProperty, owner: GetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:GetControllerProxy:ReturnValue"
+msgid "Return Value"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:RotationSpeed
+#. SourceLocation:	Meta-data for key DisplayName of member RotationSpeed in VRSimSpatialInputComponent (type: FloatProperty, owner: VRSimSpatialInputComponent)
+#: Meta-data for key DisplayName of member RotationSpeed in VRSimSpatialInputComponent (type: FloatProperty, owner: VRSimSpatialInputComponent)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:RotationSpeed"
+msgid "Rotation Speed"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:SelectedTarget
+#. SourceLocation:	Meta-data for key DisplayName of member SelectedTarget in VRSimInteractionComponent (type: ObjectProperty, owner: VRSimInteractionComponent)
+#: Meta-data for key DisplayName of member SelectedTarget in VRSimInteractionComponent (type: ObjectProperty, owner: VRSimInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:SelectedTarget"
+msgid "Selected Target"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:SetControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member SetControllerProxy in VRSimInteractionComponent (type: Function, owner: SetControllerProxy)
+#: Meta-data for key DisplayName of member SetControllerProxy in VRSimInteractionComponent (type: Function, owner: SetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:SetControllerProxy"
+msgid "Set Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:SetControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member SetControllerProxy in VRSimSpatialInputComponent (type: Function, owner: SetControllerProxy)
+#: Meta-data for key DisplayName of member SetControllerProxy in VRSimSpatialInputComponent (type: Function, owner: SetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:SetControllerProxy"
+msgid "Set Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:SetControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member SetControllerProxy in VRSimTeleportComponent (type: Function, owner: SetControllerProxy)
+#: Meta-data for key DisplayName of member SetControllerProxy in VRSimTeleportComponent (type: Function, owner: SetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:SetControllerProxy"
+msgid "Set Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimToolAdapterComponent:SetControllerProxy
+#. SourceLocation:	Meta-data for key DisplayName of member SetControllerProxy in VRSimToolAdapterComponent (type: Function, owner: SetControllerProxy)
+#: Meta-data for key DisplayName of member SetControllerProxy in VRSimToolAdapterComponent (type: Function, owner: SetControllerProxy)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent:SetControllerProxy"
+msgid "Set Controller Proxy"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent:SetDebugEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member SetDebugEnabled in VRSimControllerProxyComponent (type: Function, owner: SetDebugEnabled)
+#: Meta-data for key DisplayName of member SetDebugEnabled in VRSimControllerProxyComponent (type: Function, owner: SetDebugEnabled)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent:SetDebugEnabled"
+msgid "Set Debug Enabled"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:SetDebugEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member SetDebugEnabled in VRSimInteractionComponent (type: Function, owner: SetDebugEnabled)
+#: Meta-data for key DisplayName of member SetDebugEnabled in VRSimInteractionComponent (type: Function, owner: SetDebugEnabled)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:SetDebugEnabled"
+msgid "Set Debug Enabled"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:SetDebugEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member SetDebugEnabled in VRSimTeleportComponent (type: Function, owner: SetDebugEnabled)
+#: Meta-data for key DisplayName of member SetDebugEnabled in VRSimTeleportComponent (type: Function, owner: SetDebugEnabled)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:SetDebugEnabled"
+msgid "Set Debug Enabled"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:SetFeedbackEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member SetFeedbackEnabled in VRSimFeedbackComponent (type: Function, owner: SetFeedbackEnabled)
+#: Meta-data for key DisplayName of member SetFeedbackEnabled in VRSimFeedbackComponent (type: Function, owner: SetFeedbackEnabled)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:SetFeedbackEnabled"
+msgid "Set Feedback Enabled"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:SetGrabbedTarget
+#. SourceLocation:	Meta-data for key DisplayName of member SetGrabbedTarget in VRSimGrabComponent (type: Function, owner: SetGrabbedTarget)
+#: Meta-data for key DisplayName of member SetGrabbedTarget in VRSimGrabComponent (type: Function, owner: SetGrabbedTarget)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:SetGrabbedTarget"
+msgid "Set Grabbed Target"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:SetInteractionComponent
+#. SourceLocation:	Meta-data for key DisplayName of member SetInteractionComponent in VRSimGrabComponent (type: Function, owner: SetInteractionComponent)
+#: Meta-data for key DisplayName of member SetInteractionComponent in VRSimGrabComponent (type: Function, owner: SetInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:SetInteractionComponent"
+msgid "Set Interaction Component"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:SetInteractionEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member SetInteractionEnabled in VRSimInteractableTarget (type: Function, owner: SetInteractionEnabled)
+#: Meta-data for key DisplayName of member SetInteractionEnabled in VRSimInteractableTarget (type: Function, owner: SetInteractionEnabled)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:SetInteractionEnabled"
+msgid "Set Interaction Enabled"
+msgstr ""
+
+#. Key:	VRSimPortalBase:SetPortalEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member SetPortalEnabled in VRSimPortalBase (type: Function, owner: SetPortalEnabled)
+#: Meta-data for key DisplayName of member SetPortalEnabled in VRSimPortalBase (type: Function, owner: SetPortalEnabled)
+msgctxt "UObjectDisplayNames,VRSimPortalBase:SetPortalEnabled"
+msgid "Set Portal Enabled"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:SetSelectedTarget
+#. SourceLocation:	Meta-data for key DisplayName of member SetSelectedTarget in VRSimInteractionComponent (type: Function, owner: SetSelectedTarget)
+#: Meta-data for key DisplayName of member SetSelectedTarget in VRSimInteractionComponent (type: Function, owner: SetSelectedTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:SetSelectedTarget"
+msgid "Set Selected Target"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:SetSpatialInputEnabled
+#. SourceLocation:	Meta-data for key DisplayName of member SetSpatialInputEnabled in VRSimSpatialInputComponent (type: Function, owner: SetSpatialInputEnabled)
+#: Meta-data for key DisplayName of member SetSpatialInputEnabled in VRSimSpatialInputComponent (type: Function, owner: SetSpatialInputEnabled)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:SetSpatialInputEnabled"
+msgid "Set Spatial Input Enabled"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:SetTeleportDestination
+#. SourceLocation:	Meta-data for key DisplayName of member SetTeleportDestination in VRSimTeleportComponent (type: Function, owner: SetTeleportDestination)
+#: Meta-data for key DisplayName of member SetTeleportDestination in VRSimTeleportComponent (type: Function, owner: SetTeleportDestination)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:SetTeleportDestination"
+msgid "Set Teleport Destination"
+msgstr ""
+
+#. Key:	VRSimRayInteractionComponent:DrawRayDebug:Start
+#. SourceLocation:	Meta-data for key DisplayName of member Start in VRSimRayInteractionComponent:DrawRayDebug (type: StructProperty, owner: DrawRayDebug)
+#: Meta-data for key DisplayName of member Start in VRSimRayInteractionComponent:DrawRayDebug (type: StructProperty, owner: DrawRayDebug)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionComponent:DrawRayDebug:Start"
+msgid "Start"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:PlayInteractionFeedback:Target
+#. SourceLocation:	Meta-data for key DisplayName of member Target in VRSimFeedbackComponent:PlayInteractionFeedback (type: ObjectProperty, owner: PlayInteractionFeedback)
+#: Meta-data for key DisplayName of member Target in VRSimFeedbackComponent:PlayInteractionFeedback (type: ObjectProperty, owner: PlayInteractionFeedback)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:PlayInteractionFeedback:Target"
+msgid "Target"
+msgstr ""
+
+#. Key:	VRSimFeedbackComponent:PlaySelectionFeedback:Target
+#. SourceLocation:	Meta-data for key DisplayName of member Target in VRSimFeedbackComponent:PlaySelectionFeedback (type: ObjectProperty, owner: PlaySelectionFeedback)
+#: Meta-data for key DisplayName of member Target in VRSimFeedbackComponent:PlaySelectionFeedback (type: ObjectProperty, owner: PlaySelectionFeedback)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent:PlaySelectionFeedback:Target"
+msgid "Target"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:SetGrabbedTarget:Target
+#. SourceLocation:	Meta-data for key DisplayName of member Target in VRSimGrabComponent:SetGrabbedTarget (type: ObjectProperty, owner: SetGrabbedTarget)
+#: Meta-data for key DisplayName of member Target in VRSimGrabComponent:SetGrabbedTarget (type: ObjectProperty, owner: SetGrabbedTarget)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:SetGrabbedTarget:Target"
+msgid "Target"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:IsInteractableTarget:Target
+#. SourceLocation:	Meta-data for key DisplayName of member Target in VRSimInteractionComponent:IsInteractableTarget (type: ObjectProperty, owner: IsInteractableTarget)
+#: Meta-data for key DisplayName of member Target in VRSimInteractionComponent:IsInteractableTarget (type: ObjectProperty, owner: IsInteractableTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:IsInteractableTarget:Target"
+msgid "Target"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:SetSelectedTarget:Target
+#. SourceLocation:	Meta-data for key DisplayName of member Target in VRSimInteractionComponent:SetSelectedTarget (type: ObjectProperty, owner: SetSelectedTarget)
+#: Meta-data for key DisplayName of member Target in VRSimInteractionComponent:SetSelectedTarget (type: ObjectProperty, owner: SetSelectedTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:SetSelectedTarget:Target"
+msgid "Target"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:TryTeleport:TargetActor
+#. SourceLocation:	Meta-data for key DisplayName of member TargetActor in VRSimTeleportComponent:TryTeleport (type: ObjectProperty, owner: TryTeleport)
+#: Meta-data for key DisplayName of member TargetActor in VRSimTeleportComponent:TryTeleport (type: ObjectProperty, owner: TryTeleport)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:TryTeleport:TargetActor"
+msgid "Target Actor"
+msgstr ""
+
+#. Key:	VRSimInteractableTarget:TargetMesh
+#. SourceLocation:	Meta-data for key DisplayName of member TargetMesh in VRSimInteractableTarget (type: ObjectProperty, owner: VRSimInteractableTarget)
+#: Meta-data for key DisplayName of member TargetMesh in VRSimInteractableTarget (type: ObjectProperty, owner: VRSimInteractableTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget:TargetMesh"
+msgid "Target Mesh"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:TeleportDestination
+#. SourceLocation:	Meta-data for key DisplayName of member TeleportDestination in VRSimTeleportComponent (type: StructProperty, owner: VRSimTeleportComponent)
+#: Meta-data for key DisplayName of member TeleportDestination in VRSimTeleportComponent (type: StructProperty, owner: VRSimTeleportComponent)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:TeleportDestination"
+msgid "Teleport Destination"
+msgstr ""
+
+#. Key:	VRSimRayInteractionComponent:TraceChannel
+#. SourceLocation:	Meta-data for key DisplayName of member TraceChannel in VRSimRayInteractionComponent (type: ByteProperty, owner: VRSimRayInteractionComponent)
+#: Meta-data for key DisplayName of member TraceChannel in VRSimRayInteractionComponent (type: ByteProperty, owner: VRSimRayInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionComponent:TraceChannel"
+msgid "Trace Channel"
+msgstr ""
+
+#. Key:	VRSimRayInteractionComponent:TraceDistance
+#. SourceLocation:	Meta-data for key DisplayName of member TraceDistance in VRSimRayInteractionComponent (type: FloatProperty, owner: VRSimRayInteractionComponent)
+#: Meta-data for key DisplayName of member TraceDistance in VRSimRayInteractionComponent (type: FloatProperty, owner: VRSimRayInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionComponent:TraceDistance"
+msgid "Trace Distance"
+msgstr ""
+
+#. Key:	VRSimSpatialInputComponent:TranslationSpeed
+#. SourceLocation:	Meta-data for key DisplayName of member TranslationSpeed in VRSimSpatialInputComponent (type: FloatProperty, owner: VRSimSpatialInputComponent)
+#: Meta-data for key DisplayName of member TranslationSpeed in VRSimSpatialInputComponent (type: FloatProperty, owner: VRSimSpatialInputComponent)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent:TranslationSpeed"
+msgid "Translation Speed"
+msgstr ""
+
+#. Key:	VRSimPortalBase:TryActivatePortal:Traveler
+#. SourceLocation:	Meta-data for key DisplayName of member Traveler in VRSimPortalBase:TryActivatePortal (type: ObjectProperty, owner: TryActivatePortal)
+#: Meta-data for key DisplayName of member Traveler in VRSimPortalBase:TryActivatePortal (type: ObjectProperty, owner: TryActivatePortal)
+msgctxt "UObjectDisplayNames,VRSimPortalBase:TryActivatePortal:Traveler"
+msgid "Traveler"
+msgstr ""
+
+#. Key:	VRSimPortalBase:TryActivatePortal
+#. SourceLocation:	Meta-data for key DisplayName of member TryActivatePortal in VRSimPortalBase (type: Function, owner: TryActivatePortal)
+#: Meta-data for key DisplayName of member TryActivatePortal in VRSimPortalBase (type: Function, owner: TryActivatePortal)
+msgctxt "UObjectDisplayNames,VRSimPortalBase:TryActivatePortal"
+msgid "Try Activate Portal"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:TryGrab
+#. SourceLocation:	Meta-data for key DisplayName of member TryGrab in VRSimGrabComponent (type: Function, owner: TryGrab)
+#: Meta-data for key DisplayName of member TryGrab in VRSimGrabComponent (type: Function, owner: TryGrab)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:TryGrab"
+msgid "Try Grab"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:TryInteract
+#. SourceLocation:	Meta-data for key DisplayName of member TryInteract in VRSimInteractionComponent (type: Function, owner: TryInteract)
+#: Meta-data for key DisplayName of member TryInteract in VRSimInteractionComponent (type: Function, owner: TryInteract)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:TryInteract"
+msgid "Try Interact"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:TryRelease
+#. SourceLocation:	Meta-data for key DisplayName of member TryRelease in VRSimGrabComponent (type: Function, owner: TryRelease)
+#: Meta-data for key DisplayName of member TryRelease in VRSimGrabComponent (type: Function, owner: TryRelease)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:TryRelease"
+msgid "Try Release"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:TryTeleport
+#. SourceLocation:	Meta-data for key DisplayName of member TryTeleport in VRSimTeleportComponent (type: Function, owner: TryTeleport)
+#: Meta-data for key DisplayName of member TryTeleport in VRSimTeleportComponent (type: Function, owner: TryTeleport)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:TryTeleport"
+msgid "Try Teleport"
+msgstr ""
+
+#. Key:	VRSimTeleportComponent:UpdateDestination
+#. SourceLocation:	Meta-data for key DisplayName of member UpdateDestination in VRSimTeleportComponent (type: Function, owner: UpdateDestination)
+#: Meta-data for key DisplayName of member UpdateDestination in VRSimTeleportComponent (type: Function, owner: UpdateDestination)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent:UpdateDestination"
+msgid "Update Destination"
+msgstr ""
+
+#. Key:	VRSimInteractionComponent:UpdateDetection
+#. SourceLocation:	Meta-data for key DisplayName of member UpdateDetection in VRSimInteractionComponent (type: Function, owner: UpdateDetection)
+#: Meta-data for key DisplayName of member UpdateDetection in VRSimInteractionComponent (type: Function, owner: UpdateDetection)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent:UpdateDetection"
+msgid "Update Detection"
+msgstr ""
+
+#. Key:	VRSimGrabComponent:UpdateManipulation
+#. SourceLocation:	Meta-data for key DisplayName of member UpdateManipulation in VRSimGrabComponent (type: Function, owner: UpdateManipulation)
+#: Meta-data for key DisplayName of member UpdateManipulation in VRSimGrabComponent (type: Function, owner: UpdateManipulation)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent:UpdateManipulation"
+msgid "Update Manipulation"
+msgstr ""
+
+#. Key:	VRSimControllerProxyComponent
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimControllerProxyComponent in None (type: Class, owner: VRSimControllerProxyComponent)
+#: Meta-data for key DisplayName of member VRSimControllerProxyComponent in None (type: Class, owner: VRSimControllerProxyComponent)
+msgctxt "UObjectDisplayNames,VRSimControllerProxyComponent"
+msgid "VRSim Controller Proxy Component"
+msgstr "강의용 VR 시뮬레이션 컨트롤러 프록시 컴포넌트"
+
+#. Key:	VRSimFeedbackComponent
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimFeedbackComponent in None (type: Class, owner: VRSimFeedbackComponent)
+#: Meta-data for key DisplayName of member VRSimFeedbackComponent in None (type: Class, owner: VRSimFeedbackComponent)
+msgctxt "UObjectDisplayNames,VRSimFeedbackComponent"
+msgid "VRSim Feedback Component"
+msgstr "강의용 VR 시뮬레이션 피드백 컴포넌트"
+
+#. Key:	VRSimGrabComponent
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimGrabComponent in None (type: Class, owner: VRSimGrabComponent)
+#: Meta-data for key DisplayName of member VRSimGrabComponent in None (type: Class, owner: VRSimGrabComponent)
+msgctxt "UObjectDisplayNames,VRSimGrabComponent"
+msgid "VRSim Grab Component"
+msgstr "강의용 VR 시뮬레이션 그랩 컴포넌트"
+
+#. Key:	VRSimInteractable
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimInteractable in None (type: Class, owner: VRSimInteractable)
+#: Meta-data for key DisplayName of member VRSimInteractable in None (type: Class, owner: VRSimInteractable)
+msgctxt "UObjectDisplayNames,VRSimInteractable"
+msgid "VRSim Interactable"
+msgstr "강의용 VR 시뮬레이션 상호작용 대상"
+
+#. Key:	VRSimInteractableTarget
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimInteractableTarget in None (type: Class, owner: VRSimInteractableTarget)
+#: Meta-data for key DisplayName of member VRSimInteractableTarget in None (type: Class, owner: VRSimInteractableTarget)
+msgctxt "UObjectDisplayNames,VRSimInteractableTarget"
+msgid "VRSim Interactable Target"
+msgstr "강의용 VR 시뮬레이션 상호작용 대상 액터"
+
+#. Key:	VRSimInteractionComponent
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimInteractionComponent in None (type: Class, owner: VRSimInteractionComponent)
+#: Meta-data for key DisplayName of member VRSimInteractionComponent in None (type: Class, owner: VRSimInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimInteractionComponent"
+msgid "VRSim Interaction Component"
+msgstr "강의용 VR 시뮬레이션 상호작용 컴포넌트"
+
+#. Key:	VRSimNearInteractionComponent
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimNearInteractionComponent in None (type: Class, owner: VRSimNearInteractionComponent)
+#: Meta-data for key DisplayName of member VRSimNearInteractionComponent in None (type: Class, owner: VRSimNearInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimNearInteractionComponent"
+msgid "VRSim Near Interaction Component"
+msgstr "강의용 VR 시뮬레이션 근거리 상호작용 컴포넌트"
+
+#. Key:	VRSimPortalBase
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimPortalBase in None (type: Class, owner: VRSimPortalBase)
+#: Meta-data for key DisplayName of member VRSimPortalBase in None (type: Class, owner: VRSimPortalBase)
+msgctxt "UObjectDisplayNames,VRSimPortalBase"
+msgid "VRSim Portal Base"
+msgstr "강의용 VR 시뮬레이션 포털 베이스"
+
+#. Key:	VRSimRayInteractionComponent
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimRayInteractionComponent in None (type: Class, owner: VRSimRayInteractionComponent)
+#: Meta-data for key DisplayName of member VRSimRayInteractionComponent in None (type: Class, owner: VRSimRayInteractionComponent)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionComponent"
+msgid "VRSim Ray Interaction Component"
+msgstr "강의용 VR 시뮬레이션 레이 상호작용 컴포넌트"
+
+#. Key:	VRSimRayInteractionExampleComponent
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimRayInteractionExampleComponent in None (type: Class, owner: VRSimRayInteractionExampleComponent)
+#: Meta-data for key DisplayName of member VRSimRayInteractionExampleComponent in None (type: Class, owner: VRSimRayInteractionExampleComponent)
+msgctxt "UObjectDisplayNames,VRSimRayInteractionExampleComponent"
+msgid "VRSim Ray Interaction Example Component"
+msgstr "강의용 VR 시뮬레이션 레이 상호작용 예제 컴포넌트"
+
+#. Key:	VRSimSpatialInputComponent
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimSpatialInputComponent in None (type: Class, owner: VRSimSpatialInputComponent)
+#: Meta-data for key DisplayName of member VRSimSpatialInputComponent in None (type: Class, owner: VRSimSpatialInputComponent)
+msgctxt "UObjectDisplayNames,VRSimSpatialInputComponent"
+msgid "VRSim Spatial Input Component"
+msgstr "강의용 VR 시뮬레이션 공간 입력 컴포넌트"
+
+#. Key:	VRSimTeleportComponent
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimTeleportComponent in None (type: Class, owner: VRSimTeleportComponent)
+#: Meta-data for key DisplayName of member VRSimTeleportComponent in None (type: Class, owner: VRSimTeleportComponent)
+msgctxt "UObjectDisplayNames,VRSimTeleportComponent"
+msgid "VRSim Teleport Component"
+msgstr "강의용 VR 시뮬레이션 텔레포트 컴포넌트"
+
+#. Key:	VRSimToolAdapterComponent
+#. SourceLocation:	Meta-data for key DisplayName of member VRSimToolAdapterComponent in None (type: Class, owner: VRSimToolAdapterComponent)
+#: Meta-data for key DisplayName of member VRSimToolAdapterComponent in None (type: Class, owner: VRSimToolAdapterComponent)
+msgctxt "UObjectDisplayNames,VRSimToolAdapterComponent"
+msgid "VRSim Tool Adapter Component"
+msgstr "강의용 VR 시뮬레이션 툴 어댑터 컴포넌트"

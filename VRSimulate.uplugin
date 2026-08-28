@@ -27,6 +27,13 @@
 	],
 	"ExplicitlyLoaded": true,
 	"BuiltInInitialFeatureState": "Registered",
+	"LocalizationTargets": [
+		{
+			"Name": "VRSimulate_Properties",
+			"LoadingPolicy": "PropertyNames",
+			"ConfigGenerationPolicy": "Auto"
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "ShooterCore",
