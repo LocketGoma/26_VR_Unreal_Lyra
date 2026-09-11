@@ -26,8 +26,9 @@ AParcelSortingArena::AParcelSortingArena()
 
 AParcelSortingArena* AParcelSortingArena::Find(const UWorld* World)
 {
-	if (World) for (TActorIterator<AParcelSortingArena> It(World); It; ++It) return *It;
-	return nullptr;
+	if (!World) return nullptr;
+	TActorIterator<AParcelSortingArena> It(World);
+	return It ? *It : nullptr;
 }
 
 void AParcelSortingArena::BeginPlay()
