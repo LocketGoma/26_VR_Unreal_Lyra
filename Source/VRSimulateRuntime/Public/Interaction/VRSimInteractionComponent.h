@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Components/ActorComponent.h"
+#include "Engine/EngineTypes.h"
 #include "VRSimInteractionComponent.generated.h"
 
 class AActor;
@@ -31,6 +32,16 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "VR Simulate|Interaction")
 	bool SetSelectedTarget(AActor* Target);
+
+	// Latest trace context, including non-interactable blocking surfaces.
+	UFUNCTION(BlueprintCallable, Category = "VR Simulate|Interaction")
+	bool SetSelectedHit(const FHitResult& Hit);
+	UFUNCTION(BlueprintPure, Category = "VR Simulate|Interaction")
+	FHitResult GetLastHitResult() const { return LastHitResult; }
+	UFUNCTION(BlueprintCallable, Category = "VR Simulate|Interaction")
+	void SetInteractionEnabled(bool bEnabled);
+	void SetSelectionSuppressed(bool bSuppressed);
+	bool CanDetect() const { return bInteractionEnabled && !bSelectionSuppressed; }
 
 	UFUNCTION(BlueprintCallable, Category = "VR Simulate|Interaction")
 	void ClearSelectedTarget();
@@ -63,4 +74,8 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "VR Simulate|Debug")
 	bool bDebugInteraction = false;
+
+	UPROPERTY(Transient) FHitResult LastHitResult;
+	bool bInteractionEnabled = true;
+	bool bSelectionSuppressed = false;
 };

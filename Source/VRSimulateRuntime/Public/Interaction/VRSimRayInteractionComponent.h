@@ -10,6 +10,10 @@ class VRSIMULATERUNTIME_API UVRSimRayInteractionComponent : public UVRSimInterac
 	GENERATED_BODY()
 
 public:
+	virtual void UpdateDetection_Implementation(float DeltaTime) override;
+	void SetTraceDistance(float Distance) { TraceDistance = FMath::Max(0.f, Distance); }
+	float GetTraceDistance() const { return TraceDistance; }
+
 	UFUNCTION(BlueprintPure, Category = "VR Simulate|Ray")
 	FVector GetRayStart() const;
 

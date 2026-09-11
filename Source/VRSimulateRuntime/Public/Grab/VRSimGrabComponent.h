@@ -5,6 +5,7 @@
 
 class AActor;
 class UVRSimInteractionComponent;
+class UPrimitiveComponent;
 
 UCLASS(BlueprintType, Blueprintable, ClassGroup = "VR Simulate", meta = (BlueprintSpawnableComponent, ToolTip = "대상 Grab, Release 및 Manipulation의 공통 기반 컴포넌트입니다.", ShortToolTip = "Grab 및 Manipulation 컴포넌트입니다."))
 class VRSIMULATERUNTIME_API UVRSimGrabComponent : public UActorComponent
@@ -15,6 +16,7 @@ public:
 	UVRSimGrabComponent();
 
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 	UFUNCTION(BlueprintCallable, Category = "VR Simulate|Grab")
 	void SetInteractionComponent(UVRSimInteractionComponent* InInteractionComponent);
@@ -40,6 +42,22 @@ public:
 	UFUNCTION(BlueprintPure, Category = "VR Simulate|Grab")
 	FTransform GetGrabAttachTransform() const;
 
+	UFUNCTION(BlueprintCallable, Category = "VR Simulate|Grab")
+	void AdjustHoldDistance(float Steps);
+	UFUNCTION(BlueprintCallable, Category = "VR Simulate|Grab")
+	void ResetHoldDistance();
+	// Distances in centimeters; DistanceStep is centimeters per input unit.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="VR Simulate|Grab", meta=(ClampMin="0"))
+	float DefaultHoldDistance = 200.f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="VR Simulate|Grab", meta=(ClampMin="0"))
+	float MinHoldDistance = 90.f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="VR Simulate|Grab", meta=(ClampMin="0"))
+	float MaxHoldDistance = 330.f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="VR Simulate|Grab", meta=(ClampMin="0"))
+	float DistanceStep = 20.f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="VR Simulate|Grab", meta=(ClampMin="0"))
+	float FollowSpeed = 14.f;
+
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR Simulate|Grab")
 	bool TryGrab();
 	virtual bool TryGrab_Implementation();
@@ -58,4 +76,10 @@ protected:
 
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = "VR Simulate|Grab")
 	TObjectPtr<AActor> GrabbedTarget;
+
+private:
+	UFUNCTION() void HandleTargetDestroyed(AActor* Target);
+	UPROPERTY(Transient) TWeakObjectPtr<UPrimitiveComponent> GrabbedPrimitive;
+	float HoldDistance = 200.f;
+	bool bRestoreSimulation = false;
 };

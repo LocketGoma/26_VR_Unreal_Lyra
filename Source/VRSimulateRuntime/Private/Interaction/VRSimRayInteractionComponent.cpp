@@ -1,6 +1,21 @@
 #include "Interaction/VRSimRayInteractionComponent.h"
 
 #include "DrawDebugHelpers.h"
+#include "Engine/World.h"
+
+void UVRSimRayInteractionComponent::UpdateDetection_Implementation(float DeltaTime)
+{
+	if (!CanDetect() || !ControllerProxy || !GetWorld())
+	{
+		SetSelectedHit(FHitResult());
+		return;
+	}
+	FHitResult Hit;
+	FCollisionQueryParams Params(SCENE_QUERY_STAT(VRSimRayInteraction), false, GetOwner());
+	GetWorld()->LineTraceSingleByChannel(Hit, GetRayStart(), GetRayEnd(), TraceChannel, Params);
+	SetSelectedHit(Hit);
+	DrawRayDebug(GetRayStart(), GetRayEnd(), Hit);
+}
 
 FVector UVRSimRayInteractionComponent::GetRayStart() const
 {

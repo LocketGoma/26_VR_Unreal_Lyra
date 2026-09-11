@@ -14,8 +14,18 @@ public class VRSimulateRuntime : ModuleRules
 				"Core",
 				"CoreUObject",
 				"Engine",
+				"LyraGame",
+				// Public GenericTeam dependency inherited from ALyraCharacter.
+				"AIModule",
+				"EnhancedInput",
+				"InputCore",
+				"GameplayAbilities",
+				"GameplayTags",
+				"GameplayTasks",
 				"ShooterCoreRuntime"
 			}
 			);
+
+		PrivateDependencyModuleNames.AddRange(new string[] { "PhysicsCore" });
 	}
 }

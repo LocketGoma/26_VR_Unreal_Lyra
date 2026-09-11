@@ -12,7 +12,7 @@ public:
 	UVRSimFeedbackComponent();
 
 	UFUNCTION(BlueprintCallable, Category = "VR Simulate|Feedback")
-	void SetFeedbackEnabled(bool bEnabled);
+	virtual void SetFeedbackEnabled(bool bEnabled);
 
 	UFUNCTION(BlueprintPure, Category = "VR Simulate|Feedback")
 	bool IsFeedbackEnabled() const;

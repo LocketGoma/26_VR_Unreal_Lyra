@@ -36,6 +36,14 @@
 	],
 	"Plugins": [
 		{
+			"Name": "EnhancedInput",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		},
+		{
 			"Name": "ShooterCore",
 			"Enabled": true,
 			"Activate": true
@@ -44,6 +52,10 @@
 			"Name": "ShooterTests",
 			"Enabled": true,
 			"Activate": true
+		},
+		{
+			"Name": "LyraExampleContent",
+			"Enabled": true
 		}
 	]
 }
