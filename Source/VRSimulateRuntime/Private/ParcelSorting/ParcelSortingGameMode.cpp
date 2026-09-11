@@ -18,9 +18,8 @@ AParcelSortingGameMode::AParcelSortingGameMode()
 void AParcelSortingGameMode::InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage)
 {
 	Super::InitGame(MapName, Options, ErrorMessage);
-	bool bHasStart = false;
-	for (TActorIterator<APlayerStart> It(GetWorld()); It; ++It) { bHasStart = true; break; }
-	if (!bHasStart) GetWorld()->SpawnActor<APlayerStart>(FVector(0, 0, 100), FRotator::ZeroRotator);
+	TActorIterator<APlayerStart> PlayerStartIt(GetWorld());
+	if (!PlayerStartIt) GetWorld()->SpawnActor<APlayerStart>(FVector(0, 0, 100), FRotator::ZeroRotator);
 }
 
 void AParcelSortingGameMode::StartPlay()
