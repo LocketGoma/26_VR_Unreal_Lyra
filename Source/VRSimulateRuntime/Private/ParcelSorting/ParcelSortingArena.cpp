@@ -2,11 +2,13 @@
 #include "ParcelSorting/ParcelCart.h"
 #include "ParcelSorting/ParcelPackage.h"
 #include "ParcelSorting/ParcelSortingCharacter.h"
+#include "ParcelSorting/ParcelSortingGameMode.h"
 #include "Feedback/VRSimOutlineFeedbackComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/TextRenderComponent.h"
 #include "Engine/StaticMesh.h"
 #include "Engine/World.h"
+#include "Engine/Engine.h"
 #include "Engine/DirectionalLight.h"
 #include "Components/DirectionalLightComponent.h"
 #include "Engine/PointLight.h"
@@ -27,6 +29,8 @@ AParcelSortingArena::AParcelSortingArena()
 AParcelSortingArena* AParcelSortingArena::Find(const UWorld* World)
 {
 	if (!World) return nullptr;
+	if (const auto* GameMode = World->GetAuthGameMode<AParcelSortingGameMode>())
+		return IsValid(GameMode->ActiveArena) ? GameMode->ActiveArena.Get() : nullptr;
 	TActorIterator<AParcelSortingArena> It(World);
 	return It ? *It : nullptr;
 }
@@ -34,8 +38,33 @@ AParcelSortingArena* AParcelSortingArena::Find(const UWorld* World)
 void AParcelSortingArena::BeginPlay()
 {
 	Super::BeginPlay();
+	// Unselected or late-loaded arenas cannot start a second workstation or round.
+	if (const auto* GameMode = GetWorld()->GetAuthGameMode<AParcelSortingGameMode>(); GameMode && GameMode->ActiveArena != this)
+	{
+		SetActorTickEnabled(false);
+		SetActorHiddenInGame(true);
+		SetActorEnableCollision(false);
+		return;
+	}
 	BuildWorkstation();
 	RestartRound();
+}
+
+AParcelSortingArena* AParcelSortingArena::GetArena(const UObject* WorldContextObject)
+{
+	return Find(GEngine ? GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::ReturnNull) : nullptr);
+}
+
+void AParcelSortingArena::SetGameDuration(float NewDuration, bool bApplyToCurrentRound)
+{
+	const bool bWasActive = IsRoundActive();
+	if (bRunning && !bWasActive) EndRound();
+	Settings.GameDuration = FMath::Max(1.f, NewDuration);
+	if (bApplyToCurrentRound && bWasActive)
+	{
+		RoundEndTime = RoundStartTime + Settings.GameDuration;
+		if (!IsRoundActive()) EndRound();
+	}
 }
 
 // Runtime workstation geometry, cart placement and lighting.
@@ -207,7 +236,8 @@ void AParcelSortingArena::RestartRound()
 	Packages.Empty();
 	for (AParcelCart* Cart : Carts) if (IsValid(Cart)) Cart->ResetCart();
 	Stats = FParcelSortingStats();
-	RoundEndTime = GetWorld()->GetTimeSeconds() + FMath::Max(1.f, Settings.GameDuration);
+	RoundStartTime = GetWorld()->GetTimeSeconds();
+	RoundEndTime = RoundStartTime + FMath::Max(1.f, Settings.GameDuration);
 	SpawnCountdown = FMath::Max(.1f, Settings.PackageSpawnInterval);
 	bRunning = true;
 	OnRoundRestarted.Broadcast();

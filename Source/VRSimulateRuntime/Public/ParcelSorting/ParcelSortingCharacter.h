@@ -3,6 +3,7 @@
 #include "Character/LyraCharacter.h"
 #include "AbilitySystem/Abilities/LyraGameplayAbility.h"
 #include "Base/VRSimInputRouterComponent.h"
+#include "Camera/LyraCameraComponent.h"
 #include "ParcelSortingCharacter.generated.h"
 
 class ULyraAbilitySystemComponent;
@@ -37,11 +38,25 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Interaction") TObjectPtr<UVRSimGrabComponent> Grab;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Input") TObjectPtr<UVRSimInputRouterComponent> InputRouter;
 
+	// Fallback mode for the standalone sample when Lyra supplies no mode.
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Camera", meta=(AllowAbstract="false"))
+	TSubclassOf<ULyraCameraMode> DefaultCameraMode;
+	// CameraComponent target FOV minus the selected camera mode's configured default.
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Transient, Category="Camera", meta=(Units="deg"))
+	float CameraFOVOffset = 0.f;
+
 	// Existing sample defaults, in centimeters. Applied to the composed components at BeginPlay.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Interaction", meta=(ClampMin="100")) float InteractionDistance = 350.f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Interaction", meta=(ClampMin="80")) float HoldDistance = 200.f;
 private:
 	bool CanPlay() const;
+	void BindCameraModeDelegate();
+	TSubclassOf<ULyraCameraMode> DetermineCameraMode();
+	FLyraCameraModeDelegate PreviousCameraModeDelegate;
+	// Separate input from the final FOV written back by Lyra after each view evaluation.
+	float TargetCameraFOV = 90.f;
+	float LastCameraFOVOutput = 90.f;
+	bool bHasCameraFOVOutput = false;
 	void UpdateInteractionContext();
 	void HandleInputCommand(EVRSimInputCommand Command, const FInputActionValue& Value);
 	UPROPERTY() TObjectPtr<ULyraAbilitySystemComponent> ParcelAbilitySystem;

@@ -12,6 +12,9 @@ import unreal
 
 EXPECTED_PROJECT = Path(r"F:\Programing\Git\26_VR\LyraStarterGame\LyraStarterGame.uproject")
 MAP_PATH = "/VRSimulate/Maps/L_ParcelSorting"
+# Blueprint generated-class paths end in _C. None delegates arena creation to GameMode.
+ARENA_CLASS_PATH = "/Script/VRSimulateRuntime.ParcelSortingArena"
+GAME_MODE_CLASS_PATH = "/Script/VRSimulateRuntime.ParcelSortingGameMode"
 
 
 def verify_project():
@@ -30,9 +33,9 @@ def verify_project():
 def create_map():
     feature = verify_project()
     map_path = MAP_PATH
-    arena_class = unreal.load_class(None, "/Script/VRSimulateRuntime.ParcelSortingArena")
-    game_mode_class = unreal.load_class(None, "/Script/VRSimulateRuntime.ParcelSortingGameMode")
-    if not arena_class or not game_mode_class:
+    arena_class = unreal.load_class(None, ARENA_CLASS_PATH) if ARENA_CLASS_PATH else None
+    game_mode_class = unreal.load_class(None, GAME_MODE_CLASS_PATH)
+    if (ARENA_CLASS_PATH and not arena_class) or not game_mode_class:
         raise RuntimeError("VRSimulateRuntime classes are unavailable. Build LyraEditor manually, reopen the verified project, and ensure VRSimulate is Registered or higher.")
 
     assets = unreal.get_editor_subsystem(unreal.EditorAssetSubsystem)
@@ -48,10 +51,11 @@ def create_map():
     if not world:
         raise RuntimeError("No editor world after creating the map.")
     world.get_world_settings().set_editor_property("default_game_mode", game_mode_class)
-    arena = actors.spawn_actor_from_class(arena_class, unreal.Vector(0, 0, 0))
-    if not arena:
-        raise RuntimeError("Failed to place ParcelSortingArena")
-    arena.set_actor_label("Parcel Sorting - Settings (geometry appears in Play)")
+    if arena_class:
+        arena = actors.spawn_actor_from_class(arena_class, unreal.Vector(0, 0, 0))
+        if not arena:
+            raise RuntimeError("Failed to place ParcelSortingArena")
+        arena.set_actor_label("Parcel Sorting - Settings (geometry appears in Play)")
     start = actors.spawn_actor_from_class(unreal.PlayerStart, unreal.Vector(0, 0, 100))
     if not start:
         raise RuntimeError("Failed to place PlayerStart")

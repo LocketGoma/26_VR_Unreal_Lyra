@@ -2,16 +2,17 @@
 #include "ParcelSorting/ParcelSortingArena.h"
 #include "ParcelSorting/ParcelPackage.h"
 #include "ParcelSorting/ParcelCart.h"
+#include "ParcelSorting/ParcelCameraMode.h"
 #include "Base/VRSimControllerProxyComponent.h"
 #include "Interaction/VRSimRayInteractionComponent.h"
 #include "Grab/VRSimGrabComponent.h"
 #include "AbilitySystem/LyraAbilitySystemComponent.h"
-#include "Camera/CameraTypes.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/PlayerController.h"
+#include "UObject/UnrealType.h"
 
 AParcelSortingCharacter::AParcelSortingCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
@@ -32,12 +33,14 @@ AParcelSortingCharacter::AParcelSortingCharacter(const FObjectInitializer& Objec
 	GetCharacterMovement()->MaxWalkSpeed = 430.f;
 	GetCharacterMovement()->bEnablePhysicsInteraction = false;
 	BaseEyeHeight = 70.f;
+	DefaultCameraMode = UParcelCameraMode::StaticClass();
 }
 
 UAbilitySystemComponent* AParcelSortingCharacter::GetAbilitySystemComponent() const { return ParcelAbilitySystem; }
 
 void AParcelSortingCharacter::BeginPlay()
 {
+	BindCameraModeDelegate();
 	Super::BeginPlay();
 	// Explicit sample update order: view pose, detection, then held-object movement.
 	Interaction->SetComponentTickEnabled(false);
@@ -60,6 +63,12 @@ void AParcelSortingCharacter::EndPlay(const EEndPlayReason::Type EndPlayReason)
 	InputRouter->ClearInput();
 	ParcelAbilitySystem->CancelAllAbilities();
 	ParcelAbilitySystem->ClearActorInfo();
+	if (auto* Camera = ULyraCameraComponent::FindCameraComponent(this);
+		Camera && Camera->DetermineCameraModeDelegate.IsBoundToObject(this))
+	{
+		Camera->DetermineCameraModeDelegate = PreviousCameraModeDelegate;
+	}
+	PreviousCameraModeDelegate.Unbind();
 	Super::EndPlay(EndPlayReason);
 }
 
@@ -81,13 +90,6 @@ bool AParcelSortingCharacter::CanPlay() const
 {
 	const auto* Arena = AParcelSortingArena::Find(GetWorld());
 	return Arena && Arena->IsRoundActive() && IsLocallyControlled();
-}
-
-void AParcelSortingCharacter::CalcCamera(float DeltaTime, FMinimalViewInfo& OutResult)
-{
-	OutResult.Location = GetPawnViewLocation();
-	OutResult.Rotation = GetViewRotation();
-	OutResult.FOV = 90.f;
 }
 
 void AParcelSortingCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -132,9 +134,66 @@ void AParcelSortingCharacter::HandleInputCommand(EVRSimInputCommand Command, con
 	}
 }
 
+void AParcelSortingCharacter::CalcCamera(float DeltaTime, FMinimalViewInfo& OutResult)
+{
+	BindCameraModeDelegate();
+	auto* Camera = ULyraCameraComponent::FindCameraComponent(this);
+	if (Camera && (!bHasCameraFOVOutput || Camera->FieldOfView != LastCameraFOVOutput))
+	{
+		if (FMath::IsFinite(Camera->FieldOfView))
+			TargetCameraFOV = FMath::Clamp(Camera->FieldOfView, 5.f, 170.f);
+	}
+
+	// Lyra retains ownership of the complete view calculation, including blending.
+	Super::CalcCamera(DeltaTime, OutResult);
+	if (Camera)
+	{
+		LastCameraFOVOutput = Camera->FieldOfView;
+		bHasCameraFOVOutput = true;
+	}
+}
+
+void AParcelSortingCharacter::BindCameraModeDelegate()
+{
+	if (auto* Camera = ULyraCameraComponent::FindCameraComponent(this);
+		Camera && !Camera->DetermineCameraModeDelegate.IsBoundToObject(this))
+	{
+		// Retain HeroComponent or other existing mode providers, including late bindings.
+		PreviousCameraModeDelegate = Camera->DetermineCameraModeDelegate;
+		Camera->DetermineCameraModeDelegate.BindUObject(this, &ThisClass::DetermineCameraMode);
+	}
+}
+
+TSubclassOf<ULyraCameraMode> AParcelSortingCharacter::DetermineCameraMode()
+{
+	TSubclassOf<ULyraCameraMode> Mode;
+	if (PreviousCameraModeDelegate.IsBound()) Mode = PreviousCameraModeDelegate.Execute();
+	if (!Mode) Mode = DefaultCameraMode;
+	if (!Mode || Mode->HasAnyClassFlags(CLASS_Abstract)) Mode = UParcelCameraMode::StaticClass();
+	if (auto* Camera = ULyraCameraComponent::FindCameraComponent(this))
+	{
+		// Lyra exposes no getter for the protected, reflected FOV default.
+		// The CDO's cached camera view contains an unevaluated FOV, not this setting.
+		const FFloatProperty* FOVProperty = FindFProperty<FFloatProperty>(ULyraCameraMode::StaticClass(), TEXT("FieldOfView"));
+		CameraFOVOffset = 0.f;
+		if (ensureMsgf(FOVProperty, TEXT("Lyra camera mode FieldOfView property is unavailable.")))
+		{
+			const float ModeDefaultFOV = FOVProperty->GetPropertyValue_InContainer(Mode->GetDefaultObject());
+			if (FMath::IsFinite(ModeDefaultFOV)) CameraFOVOffset = TargetCameraFOV - ModeDefaultFOV;
+		}
+		// Invoked once per camera evaluation; Lyra clears the offset after applying it.
+		Camera->AddFieldOfViewOffset(CameraFOVOffset);
+	}
+	return Mode;
+}
+
 void AParcelSortingCharacter::UpdateInteractionContext()
 {
-	ControllerProxy->SetWorldLocationAndRotation(GetPawnViewLocation(), GetViewRotation());
+	FVector ViewLocation = GetPawnViewLocation();
+	FRotator ViewRotation = GetViewRotation();
+	if (const auto* PC = Cast<APlayerController>(GetController()); PC && PC->GetViewTarget() == this)
+		PC->GetPlayerViewPoint(ViewLocation, ViewRotation);
+	ControllerProxy->SetWorldLocationAndRotation(ViewLocation, ViewRotation);
 	Interaction->SetInteractionEnabled(CanPlay());
 }
 
@@ -175,6 +234,7 @@ void AParcelSortingCharacter::ResetForRound(const FVector& Location)
 void AParcelSortingCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
+	BindCameraModeDelegate();
 	InputRouter->SetGameplayInputEnabled(CanPlay());
 	InputRouter->PollFallbackInput();
 	UpdateInteractionContext();

@@ -13,6 +13,7 @@ AParcelSortingGameMode::AParcelSortingGameMode()
 {
 	DefaultPawnClass = AParcelSortingCharacter::StaticClass();
 	HUDClass = AParcelSortingHUD::StaticClass();
+	ArenaClass = AParcelSortingArena::StaticClass();
 }
 
 void AParcelSortingGameMode::InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage)
@@ -24,8 +25,56 @@ void AParcelSortingGameMode::InitGame(const FString& MapName, const FString& Opt
 
 void AParcelSortingGameMode::StartPlay()
 {
-	if (!AParcelSortingArena::Find(GetWorld())) GetWorld()->SpawnActor<AParcelSortingArena>();
+	// Arena selection precedes world BeginPlay and workstation generation.
+	InitializeArena();
 	Super::StartPlay();
+}
+
+void AParcelSortingGameMode::InitializeArena()
+{
+	if (IsValid(ActiveArena)) return;
+	ActiveArena = nullptr;
+	UClass* ClassToSpawn = ArenaClass ? ArenaClass.Get() : AParcelSortingArena::StaticClass();
+	UE_LOG(LogTemp, Log, TEXT("ParcelSorting: GameMode=%s, ArenaClass=%s, UsePlacedArena=%s"),
+		*GetClass()->GetPathName(), *ClassToSpawn->GetPathName(), bUsePlacedArena ? TEXT("true") : TEXT("false"));
+
+	TArray<AParcelSortingArena*> PlacedArenas;
+	for (TActorIterator<AParcelSortingArena> It(GetWorld()); It; ++It)
+	{
+		if (!IsValid(*It)) continue;
+		PlacedArenas.Add(*It);
+		// Exact class matching permits replacing a child BP with its selected parent.
+		if (!ActiveArena && (bUsePlacedArena || It->GetClass() == ClassToSpawn)) ActiveArena = *It;
+	}
+
+	if (!ActiveArena)
+	{
+		const FTransform SpawnTransform = PlacedArenas.IsEmpty()
+			? FTransform::Identity : PlacedArenas[0]->GetActorTransform();
+		FActorSpawnParameters Params;
+		Params.Owner = this;
+		Params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		ActiveArena = GetWorld()->SpawnActor<AParcelSortingArena>(ClassToSpawn, SpawnTransform, Params);
+	}
+
+	if (!IsValid(ActiveArena))
+	{
+		UE_LOG(LogTemp, Error, TEXT("ParcelSorting: failed to create ArenaClass=%s. No arena is active."),
+			*ClassToSpawn->GetPathName());
+		return;
+	}
+
+	// Runtime copies only; saved level actors and Blueprint assets remain unchanged.
+	for (AParcelSortingArena* Placed : PlacedArenas)
+	{
+		if (Placed == ActiveArena) continue;
+		UE_LOG(LogTemp, Log, TEXT("ParcelSorting: removing inactive level arena %s (%s)."),
+			*Placed->GetName(), *Placed->GetClass()->GetPathName());
+		if (!Placed->Destroy())
+			UE_LOG(LogTemp, Warning, TEXT("ParcelSorting: %s could not be destroyed; its arena initialization is disabled."), *Placed->GetName());
+	}
+	UE_LOG(LogTemp, Log, TEXT("ParcelSorting: ActiveArena=%s, Class=%s, GameDuration=%.2f"),
+		*ActiveArena->GetName(), *ActiveArena->GetClass()->GetPathName(), ActiveArena->Settings.GameDuration);
 }
 
 void AParcelSortingHUD::DrawHUD()
