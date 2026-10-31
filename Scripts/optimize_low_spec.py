@@ -25,14 +25,14 @@ except ImportError:
 GROUPS = (
     "ViewDistanceQuality", "AntiAliasingQuality", "ShadowQuality",
     "GlobalIlluminationQuality", "ReflectionQuality", "PostProcessQuality",
-    "TextureQuality", "EffectsQuality", "FoliageQuality", "ShadingQuality",
+    "TextureQuality", "FoliageQuality", "ShadingQuality",
     "LandscapeQuality",
 )
 BACKUP_DIR = Path("Saved/LowSpecOptimizer")
+EFFECTS_QUALITY = 1  # Medium; do not inherit Low/Epic from an older profile.
 RENDERER = {
     "r.RayTracing": "False",
     "r.Lumen.HardwareRayTracing": "False",
-    "r.GenerateMeshDistanceFields": "False",
     "r.DynamicGlobalIlluminationMethod": "0",
     "r.ReflectionMethod": "0",
     "r.Shadow.Virtual.Enable": "0",
@@ -85,9 +85,41 @@ def platform_name():
     return {"win32": "Windows", "darwin": "Mac", "linux": "Linux"}.get(sys.platform, "Linux")
 
 
+def original_scalar(project, candidates, sections, key, fallback=None):
+    """Read the first baseline, not an old optimizer's already-reduced values."""
+    root = project.parent
+    backup = root / BACKUP_DIR
+    manifest_path = backup / "manifest.json"
+    manifest = json.loads(manifest_path.read_bytes()) if manifest_path.exists() else None
+    for name in candidates:
+        if manifest is not None:
+            if not manifest["files"].get(name, False):
+                continue
+            data = (backup / "original" / name).read_bytes()
+        else:
+            data = read_optional(root / name)
+        if data is None:
+            continue
+        encoding = "utf-16" if data.startswith((codecs.BOM_UTF16_LE, codecs.BOM_UTF16_BE)) else "utf-8-sig"
+        section = ""
+        found = {}
+        for line in data.decode(encoding).splitlines():
+            header = re.match(r"^\s*\[([^]]+)\]", line)
+            if header:
+                section = header.group(1).casefold()
+            left, separator, right = line.partition("=")
+            if separator and left.strip().casefold() == key.casefold():
+                found[section] = right.split(";", 1)[0].strip()
+        for name in sections:
+            if name.casefold() in found:
+                return found[name.casefold()]
+    return fallback
+
+
 def runtime_cvars(fps=30, screen=50, pool_mb=256, disable_nanite=False):
     values = {"sg." + name: "0" for name in GROUPS}
     values.update({
+        "sg.EffectsQuality": str(EFFECTS_QUALITY),
         "sg.ResolutionQuality": str(screen),
         "t.MaxFPS": str(fps),
         "r.VSync": "0",
@@ -138,10 +170,16 @@ def build_profile(project, fps=30, screen=50, pool_mb=256, shader_workers=4,
                   disable_nanite=False):
     """Return project-relative config patches; never writes engine/global files."""
     cvars = runtime_cvars(fps, screen, pool_mb, disable_nanite)
+    renderer = dict(RENDERER)
+    # Niagara GPU distance-field collision can need this project capability.
+    # Also undo the previous profile's override when reapplying with its backup.
+    renderer["r.GenerateMeshDistanceFields"] = original_scalar(
+        project, ("Config/DefaultEngine.ini",),
+        ("/Script/Engine.RendererSettings",), "r.GenerateMeshDistanceFields")
     # Reserve at least one logical core. UE may apply its own low-core overrides.
     unused = max(1, (os.cpu_count() or 2) - shader_workers)
     engine = {
-        "/Script/Engine.RendererSettings": dict(RENDERER),
+        "/Script/Engine.RendererSettings": renderer,
         "SystemSettings": cvars,
         "SystemSettingsEditor": dict(cvars),
         "DevOptions.Shaders": {
@@ -151,6 +189,7 @@ def build_profile(project, fps=30, screen=50, pool_mb=256, shader_workers=4,
         },
     }
     quality = {"sg." + name: "0" for name in GROUPS}
+    quality["sg.EffectsQuality"] = str(EFFECTS_QUALITY)
     quality["sg.ResolutionQuality"] = str(screen)
     game = {
         "bUseVSync": "False", "bUseDynamicResolution": "False",
@@ -218,7 +257,7 @@ def merge_ini(data, sections):
         lines = text.splitlines()
         indices = [i for i, line in enumerate(lines)
                    if line.strip().casefold() == ("[" + name + "]").casefold()]
-        entries = [key + "=" + str(value) for key, value in keys.items()]
+        entries = [key + "=" + str(value) for key, value in keys.items() if value is not None]
         if indices:
             pos = indices[-1] + 1
             lines[pos:pos] = entries
@@ -272,8 +311,9 @@ def apply(project=None, fps=30, screen=50, pool_mb=256, shader_workers=4,
     before = {name: read_optional(root / name) for name in patches}
     after = {name: merge_ini(before[name] or b"", patch) for name, patch in patches.items()}
     log("Project: " + str(project))
-    log("Low / {} FPS / {}% render scale / {} MB texture pool / {} shader workers requested".format(
+    log("Low (Effects Medium) / {} FPS / {}% render scale / {} MB texture pool / {} shader workers requested".format(
         fps, screen, pool_mb, shader_workers))
+    log("Effects quality: " + patches["Config/DefaultEngine.ini"]["SystemSettings"]["sg.EffectsQuality"])
     for name in patches:
         if before[name] == after[name]:
             continue
@@ -314,88 +354,8 @@ def apply(project=None, fps=30, screen=50, pool_mb=256, shader_workers=4,
         restore_bytes(manifest_path, old_manifest)
         raise
     log("Original settings backup: " + str(backup))
-    if unreal is not None:
-        apply_live(fps, screen, pool_mb, disable_nanite)
-    log("Saved. Restart the editor for ray tracing, distance fields and shader workers.")
+    log("Saved. Restart the editor to apply this profile. No live scalability changes were made.")
     log("Texture pool is a streaming budget, NOT a total RAM/VRAM limit.")
-
-
-def apply_live(fps, screen, pool_mb, disable_nanite):
-    """Apply supported session settings without saving assets or global prefs."""
-    world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()
-    # Align the user settings object with the profile, so a later PIE settings
-    # save does not write its previously cached high quality back to disk.
-    try:
-        user_settings = unreal.GameUserSettings.get_game_user_settings()
-    except Exception as exc:
-        log("Cached game settings unavailable; continuing with console settings: " + str(exc))
-        user_settings = None
-    if user_settings is not None:
-        setters = {
-            "set_overall_scalability_level": 0,
-            "set_frame_rate_limit": float(fps),
-            "set_resolution_scale_value_ex": float(screen),
-            "set_v_sync_enabled": False,
-            "set_dynamic_resolution_enabled": False,
-        }
-        for method_name, value in setters.items():
-            method = getattr(user_settings, method_name, None)
-            if not callable(method):
-                log("Cached game setting unavailable; continuing: " + method_name)
-                continue
-            try:
-                method(value)
-            except Exception as exc:
-                log("Cached game setting skipped: {} ({})".format(method_name, exc))
-    # Do not call ApplySettings: that may resize windows and writes cached config
-    # over the on-disk backup/profile. Cvars below apply current-session quality.
-    for command, value in runtime_cvars(fps, screen, pool_mb, disable_nanite).items():
-        try:
-            unreal.SystemLibrary.execute_console_command(world, command + " " + value)
-        except Exception as exc:
-            log("Console setting skipped: {} ({})".format(command, exc))
-    settings = {
-        "EditorPerformanceSettings": {
-            "throttle_cpu_when_not_foreground": True,
-            "monitor_editor_performance": False,
-            "enable_editor_peformance_tool": False,
-            "show_frame_rate_and_memory": True,
-            "display_high_dpi_viewports": False,
-            "override_manual_screen_percentage": True,
-            "manual_screen_percentage": float(screen),
-        },
-        "ContentBrowserSettings": {"real_time_thumbnails": False},
-        "EditorLoadingSavingSettings": {
-            "monitor_content_directories": False,
-        },
-        "MaterialEditorOptions": {
-            "realtime_material_viewport": False,
-            "realtime_expression_viewport": False,
-            "live_preview_update": False,
-            "always_refresh_all_previews": False,
-        },
-    }
-    restore_enum = getattr(unreal, "RestoreOpenAssetTabsMethod", None)
-    never_restore = getattr(restore_enum, "NEVER_RESTORE", None)
-    if never_restore is not None:
-        settings["EditorLoadingSavingSettings"]["restore_open_asset_tabs_on_restart"] = never_restore
-    # Some versions do not expose every editor preferences class to Python.
-    for class_name, properties in settings.items():
-        cls = getattr(unreal, class_name, None)
-        if cls is None:
-            log("Session preferences unavailable in this engine: " + class_name)
-            continue
-        try:
-            obj = unreal.get_default_object(cls)
-        except Exception as exc:
-            log("Session preferences unavailable: {} ({})".format(class_name, exc))
-            continue
-        for key, value in properties.items():
-            try:
-                obj.set_editor_property(key, value)
-            except Exception as exc:
-                log("Session preference skipped: {}.{} ({})".format(class_name, key, exc))
-    log("Live quality applied. Editor preferences affect this session; no global preferences saved.")
 
 
 def restore(project=None):

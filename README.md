@@ -270,7 +270,9 @@ GameMode의 `HUD Class`를 새 HUD 클래스로 지정한다.
 
 ### 저사양 PC용 품질·메모리 절약 스크립트
 
-에디터에서 `Python Editor Script Plugin`을 켠 뒤 `Tools → Execute Python Script`로 `Scripts/optimize_low_spec.py`를 실행한다. 전체 품질 Low, 30 FPS, 렌더 해상도 50%, 텍스처 스트리밍 256 MiB, 고비용 렌더링 비활성화를 적용한다. 셰이더 워커는 최대 4개를 목표로 확보한다. 재시작 후 모든 설정이 반영되며 원본을 백업한다. Windows/macOS/Linux 터미널 실행·옵션·복원 방법은 [저사양 설정 가이드](Docs/LowSpecOptimizer.md)를 참고한다.
+에디터에서 `Python Editor Script Plugin`을 켠 뒤 `Tools → Execute Python Script`로 `Scripts/optimize_low_spec.py`를 실행한다. Effects는 중간(Medium, 1), 나머지 품질 Low, 30 FPS, 렌더 해상도 50%, 텍스처 스트리밍 256 MiB, 고비용 렌더링 비활성화를 설정 파일에 저장한다. Niagara 호환성을 위해 메시 거리 필드는 원본을 보존하며, 실행 중 품질 전환 없이 재시작 후 적용한다. 셰이더 워커는 최대 4개를 목표로 확보한다. 원본을 백업하며 Windows/macOS/Linux 터미널 실행·옵션·복원 방법은 [저사양 설정 가이드](Docs/LowSpecOptimizer.md)를 참고한다.
+
+Windows에서는 에디터를 닫고 `OpenLowSpecLyraEditor.bat`을 실행하면 엔진 내장 Python으로 프로파일을 먼저 적용한 뒤 빈 맵에서 시작한다. `OpenLowSpecLyraEditor.bat -SampleMap`은 택배 분류 맵을 바로 연다. 시작 시 에셋 탭 복원·Live Coding 자동 시작·소스 관리 연결을 줄이며 DDC·셰이더 캐시는 유지한다.
 
 ### 4.1 Windows 수동 빌드와 에디터 실행
 
