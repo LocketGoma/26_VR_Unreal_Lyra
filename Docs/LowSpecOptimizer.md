@@ -87,9 +87,33 @@ OpenLowSpecLyraEditor.bat -DetectOnly
 
 이미 같은 프로젝트가 열려 있으면 중단한다. 시작 전 C++ 빌드를 별도로 실행하지 않으므로 코드 변경 후에는 IDE나 기존 `BuildAndOpenLyraEditor.bat`으로 먼저 빌드해야 한다. Unreal 자체의 필수 모듈 검사·셰이더 컴파일은 유지한다. DDC·셰이더 캐시·에셋 레지스트리를 삭제하지 않는다. 최초 준비에 필요한 작업을 생략하는 기능은 아니며 시작 시간 단축 수치를 측정하지 않았다.
 
-프로파일 복원은 아래 `restore` 명령을 사용한다. 복원 후 기본 실행으로 돌아가려면 `.uproject`를 직접 연다. 배치파일은 실행할 때마다 저사양 프로파일을 다시 적용한다. 시스템 Python 없이 복원하려면 `"<엔진 폴더>\Engine\Binaries\ThirdParty\Python3\Win64\python.exe" Scripts\optimize_low_spec.py restore`로 실행할 수 있다.
+프로파일 복원은 아래 복원 전용 스크립트나 `restore` 명령을 사용한다. 복원 후 기본 실행으로 돌아가려면 `.uproject`를 직접 연다. 저사양 실행 배치파일은 실행할 때마다 저사양 프로파일을 다시 적용한다.
 
 배치파일은 Windows PowerShell 5.1을 사용한다. 현재 macOS 작업 환경에서 Windows 에디터 실행 검증은 수행하지 않았다.
+
+### 복원 전용 스크립트
+
+**에디터를 닫은 뒤 피쳐 루트의 `RestoreLowSpecSettings.bat`을 더블클릭한다.** 연결된 엔진의 내장 Python으로 최초 최적화 적용 전 설정을 복원하며 에디터는 자동 실행하지 않는다. 해당 프로젝트가 실행 중이거나 최초 백업이 없으면 중단한다.
+
+같은 위치의 `Scripts/Start-LowSpecEditor.ps1`, `Scripts/restore_low_spec.py`, `Scripts/optimize_low_spec.py`가 필요하다. 문제 PC에도 이 파일들을 함께 복사하고, 그 PC의 기존 `Saved/LowSpecOptimizer` 백업을 유지한다. 다른 PC의 백업으로 교체하지 않는다.
+
+```bat
+:: 최초 최적화 적용 전 상태로 복원
+RestoreLowSpecSettings.bat
+
+:: 엔진 자동 탐색이 안 되는 PC
+RestoreLowSpecSettings.bat -EngineRoot "C:\Program Files\Epic Games\UE_5.8"
+
+:: 경로·백업 존재 여부만 확인, 실제 복원 없음
+RestoreLowSpecSettings.bat -DetectOnly
+
+:: 별도 Python으로 직접 복원할 경우
+py -3 Scripts\restore_low_spec.py
+```
+
+macOS/Linux는 `python3 Scripts/restore_low_spec.py`로 실행한다. Python을 직접 호출할 때도 에디터는 미리 종료한다. 에디터 내부 실행은 설정 캐시가 복원본을 덮어쓰는 문제 때문에 거부한다.
+
+복원은 대상 **INI 파일 전체**를 최초 백업으로 되돌리므로 이후 직접 바꾼 설정도 복원 대상에 포함된다. 현재 파일은 먼저 `Saved/LowSpecOptimizer/restored-<시각>/before-restore/`에 보관한다. 복원 완료 후에는 `.uproject`를 직접 열어 실행한다.
 
 ### Python을 직접 호출
 

@@ -274,6 +274,8 @@ GameMode의 `HUD Class`를 새 HUD 클래스로 지정한다.
 
 Windows에서는 에디터를 닫고 `OpenLowSpecLyraEditor.bat`을 실행하면 엔진 내장 Python으로 프로파일을 먼저 적용한 뒤 빈 맵에서 시작한다. `OpenLowSpecLyraEditor.bat -SampleMap`은 택배 분류 맵을 바로 연다. 시작 시 에셋 탭 복원·Live Coding 자동 시작·소스 관리 연결을 줄이며 DDC·셰이더 캐시는 유지한다.
 
+원래 설정으로 복원하려면 에디터를 닫고 `RestoreLowSpecSettings.bat`을 실행한다. 공용 Python 복원 파일은 `Scripts/restore_low_spec.py`다. 최초 백업으로 INI 파일 전체를 복원하고, 복원 직전 파일도 별도로 보관한다. 복원 후에는 `.uproject`를 직접 열면 된다.
+
 ### 4.1 Windows 수동 빌드와 에디터 실행
 
 Feature 루트의 `BuildAndOpenLyraEditor.bat`을 더블클릭한다. Visual Studio C++ 도구와 Windows SDK가 필요하며 현재 프로젝트 에디터를 닫은 상태에서 실행한다.

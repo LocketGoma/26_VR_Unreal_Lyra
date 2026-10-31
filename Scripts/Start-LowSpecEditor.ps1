@@ -13,6 +13,7 @@ param(
     [switch]$Mute,
     [switch]$KeepSourceControl,
     [switch]$EnableLiveCoding,
+    [switch]$Restore,
     [switch]$DetectOnly
 )
 
@@ -113,6 +114,18 @@ function Find-LowSpecAssociatedEngine([string]$Association, [IO.DirectoryInfo]$P
     }
 }
 
+function Assert-LowSpecProjectClosed([IO.FileInfo]$Project) {
+    $editors = @(Get-CimInstance Win32_Process -Filter "Name = 'UnrealEditor.exe' OR Name = 'UnrealEditor-Cmd.exe'")
+    foreach ($running in $editors) {
+        if ([string]::IsNullOrWhiteSpace($running.CommandLine)) {
+            throw 'A running editor command line is inaccessible. Close Unreal Editor before changing settings.'
+        }
+        if ($running.CommandLine.IndexOf($Project.Name, [StringComparison]::OrdinalIgnoreCase) -ge 0) {
+            throw "This project is already open (PID $($running.ProcessId)). Close it before changing settings."
+        }
+    }
+}
+
 try {
     if ([string]::IsNullOrWhiteSpace($StartDirectory)) { $StartDirectory = Split-Path -Parent $PSScriptRoot }
     $project = Find-LowSpecProject $StartDirectory
@@ -131,6 +144,26 @@ try {
     $python = Join-Path $engine.Root 'Engine\Binaries\ThirdParty\Python3\Win64\python.exe'
     if (-not (Test-Path -LiteralPath $python -PathType Leaf)) {
         throw "Engine-bundled Python missing: $python. Install the engine's Python components."
+    }
+    if ($Restore) {
+        $restoreScript = Join-Path $PSScriptRoot 'restore_low_spec.py'
+        $backup = Join-Path $project.DirectoryName 'Saved\LowSpecOptimizer\manifest.json'
+        if (-not (Test-Path -LiteralPath $restoreScript -PathType Leaf)) { throw "Missing restore script: $restoreScript" }
+        if (-not (Test-Path -LiteralPath $backup -PathType Leaf)) { throw "No active LowSpec backup found: $backup" }
+        Write-Host "Project : $($project.FullName)"
+        Write-Host "Backup  : $backup"
+        Write-Host "Python  : $python"
+        Write-Host 'Restore replaces managed INI files with the first backup, including settings edited since optimization.'
+        Write-Host 'Current copies are archived by the optimizer before restore.'
+        if ($DetectOnly) {
+            Write-Host 'Detection only. No restore, config changes, or editor launch.'
+            exit 0
+        }
+        Assert-LowSpecProjectClosed $project
+        & $python '-I' $restoreScript '--project' $project.FullName
+        if ($LASTEXITCODE -ne 0) { throw "Restore failed ($LASTEXITCODE). Review the Python error above." }
+        Write-Host 'Restore completed. Open the .uproject normally; the low-spec launcher would apply the profile again.' -ForegroundColor Green
+        exit 0
     }
     if ($SampleMap) { $Map = '/VRSimulate/Maps/L_ParcelSorting' }
 
@@ -188,15 +221,7 @@ try {
     }
 
     # Refuse to edit settings underneath an already running instance.
-    $editors = @(Get-CimInstance Win32_Process -Filter "Name = 'UnrealEditor.exe' OR Name = 'UnrealEditor-Cmd.exe'")
-    foreach ($running in $editors) {
-        if ([string]::IsNullOrWhiteSpace($running.CommandLine)) {
-            throw 'A running editor command line is inaccessible. Close Unreal Editor before using this launcher.'
-        }
-        if ($running.CommandLine.IndexOf($project.Name, [StringComparison]::OrdinalIgnoreCase) -ge 0) {
-            throw "This project is already open (PID $($running.ProcessId)). Close it before applying startup settings."
-        }
-    }
+    Assert-LowSpecProjectClosed $project
     Write-Host 'Applying backed-up project profile before editor startup...'
     & $python '-I' $optimizer 'apply' '--project' $project.FullName '--fps' $FPS '--screen' $Screen '--pool-mb' $PoolMB '--shader-workers' $ShaderWorkers
     if ($LASTEXITCODE -ne 0) { throw "Python optimizer failed ($LASTEXITCODE). Editor was not launched." }
