@@ -268,6 +268,10 @@ GameMode의 `HUD Class`를 새 HUD 클래스로 지정한다.
 
 ## 4. 그 외: 실행 준비·참고 자료
 
+### 저사양 PC용 품질·메모리 절약 스크립트
+
+에디터에서 `Python Editor Script Plugin`을 켠 뒤 `Tools → Execute Python Script`로 `Scripts/optimize_low_spec.py`를 실행한다. 전체 품질 Low, 30 FPS, 렌더 해상도 50%, 텍스처 스트리밍 256 MiB, 고비용 렌더링 비활성화를 적용한다. 셰이더 워커는 최대 4개를 목표로 확보한다. 재시작 후 모든 설정이 반영되며 원본을 백업한다. Windows/macOS/Linux 터미널 실행·옵션·복원 방법은 [저사양 설정 가이드](Docs/LowSpecOptimizer.md)를 참고한다.
+
 ### 4.1 Windows 수동 빌드와 에디터 실행
 
 Feature 루트의 `BuildAndOpenLyraEditor.bat`을 더블클릭한다. Visual Studio C++ 도구와 Windows SDK가 필요하며 현재 프로젝트 에디터를 닫은 상태에서 실행한다.
